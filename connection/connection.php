@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-</head>
-<body>
-    
-</body>
-</html>
+<?php
+  $hostname="localhost";
+  $userName="root";
+  $password= "";
+  $database="dulces";
+  $mysqli = new mysqli($hostname,$userName,$password,$database);
+
+  if($mysqli ->connect_errno)
+  {
+    die("fallo la conexion con la base de datos $database" . mysqli_connect_errno());
+  }
+  session_start();
+?>
