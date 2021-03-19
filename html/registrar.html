@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INICIO SESION</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Merienda:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/LOGOL.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="login-box">
+        <img src="img/LOGOL.png" class="avatar" alt="avatar img">
+        <div class="inicioSesion" id="inicioSesion">
+            <h1>INICIO SESION</h1>
+
+            <form method="POST" name="form1" id="form1" action="php/ingresar.php" autocomplete="off">
+                <!--USERNAME INPUT-->
+                <label for="username">DOCUMENTO</label>
+                <input type="text" name="documento" id="usuario">
+                <!--tip_usu INPUT-->
+                <label for="tip_docu">TIPO DE DOCUMENTO </label>
+                <select name="tip_docu" id="tip_docu">
+                    <option value="">-------------/----------</option>
+                    <option value="">-------------/----------</option>
+                    <option value="">-------------/----------</option>
+                    
+                </select>
+                <!-- TIPO DE DOCUMENTO -->
+                <label for="tip_docu">TIPO DE DOCUMENTO</label>
+                <select name="tip_docu" id="tip_docu">
+                    <option value="">-------------/----------</option>
+                    <option value="">-------------/----------</option>
+                    <option value="">-------------/----------</option>
+                    
+                </select>
+                <!--PASSWORD INPUT-->
+                <label for="nombre">NOMBRE</label>
+                <input type="text" name="nombre" id="apellido">
+                <!--PASSWORD INPUT-->
+                <label for="password">APELLIDO</label>
+                <input type="text" name="apellido" id="apellido">
+                <!--PASSWORD INPUT-->
+                <label for="edad">EDAD</label>
+                <input type="text" name="edad" id="edad">
+                <!--PASSWORD INPUT-->
+                <label for="password">APELLIDO</label>
+                <input type="text" name="apellido" id="apellido">
+
+
+
+                <input type="submit" name="inicio" id="inicio" value="ingresar">
+                <input id="btn-iniciar-sesion" type="button" value="INICIAR SESION">
+            </form>
+        </div>
+
+        
+       
+      
+    </div>
+    
+</body>
+</html>
