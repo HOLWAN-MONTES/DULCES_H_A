@@ -80,3 +80,7 @@ body {
     border-style: none;
 }
 
+/* desaperecer ventana */
+.inicioSesion{
+    display: none;
+}
