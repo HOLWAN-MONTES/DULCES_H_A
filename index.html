@@ -12,17 +12,35 @@
 
     <div class="login-box">
         <img src="img/LOGOL.png" class="avatar" alt="avatar img">
-        <h1>INICIO SESION</h1>
+        <div class="inicioSesion" id="inicioSesion">
+            <h1>INICIO SESION</h1>
 
-        <form method="post" name="form1" id="form1" action="" autocomplete="off">
-            <!--USERNAME INPUT-->
-            <label for="username">DOCUMENTO</label>
-            <input type="text" name="documento" id="usuario">
-            <!--PASSWORD INPUT-->
-            <label for="password">CLAVE</label>
-            <input type="password" name="password" id="password" >
-            <input type="submit" name="inicio" id="inicio" value="ingresar">
-        </form>
+            <form method="POST" name="form1" id="form1" action="php/ingresar.php" autocomplete="off">
+                <!--USERNAME INPUT-->
+                <label for="username">DOCUMENTO</label>
+                <input type="text" name="documento" id="usuario">
+                <!--PASSWORD INPUT-->
+                <label for="password">CLAVE</label>
+                <input type="password" name="clave" id="password" >
+                <input type="submit" name="inicio" id="inicio" value="ingresar">
+                <input id="registrate" type="button" value="registrte">
+            </form>
+        </div>
+        <div class="registro" id="registrar">
+            <h1>REGISTRATE</h1>
+
+            <form method="POST" name="form1" id="form1" action="php/ingresar.php" autocomplete="off">
+                <!--USERNAME INPUT-->
+                <label for="username">DOCUMENTO</label>
+                <input type="text" name="documento" id="usuario">
+                <!--PASSWORD INPUT-->
+                <label for="password">CLAVE</label>
+                <input type="password" name="clave" id="password" >
+                <input type="submit" name="inicio" id="inicio" value="ingresar">
+                <input id="registrate" type="button" value="registrte">
+            </form>
+        </div>
+      
     </div>
     
 </body>
