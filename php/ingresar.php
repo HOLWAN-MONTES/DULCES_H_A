@@ -9,7 +9,6 @@
                 $fila = mysqli_fetch_assoc($query);
 
 
-
                         if($fila){
                             $_SESSION['tip_usu'] = $fila['tip_usu'];
                             $_SESSION['nombre'] = $fila['nombre'];

@@ -3,52 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>INICIO SESION</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/registrarU.css">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Merienda:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/LOGOL.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/LOGOL.png" type="image/x-icon">
 </head>
 
 <body>
 
     <div class="login-box">
-        <img src="img/LOGOL.png" class="avatar" alt="avatar img">
+        <img src="../img/LOGOL.png" class="avatar" alt="avatar img">
         <div class="inicioSesion" id="inicioSesion">
-            <h1>INICIO SESION</h1>
+            <h1>REGISTRATE</h1>
 
-            <form method="POST" name="form1" id="form1" action="php/ingresar.php" autocomplete="off">
-                <!--USERNAME INPUT-->
-                <label for="username">DOCUMENTO</label>
-                <input type="text" name="documento" id="usuario">
-                <!--tip_usu INPUT-->
-                <label for="tip_docu">TIPO DE DOCUMENTO </label>
-                <select name="tip_docu" id="tip_docu">
-                    <option value="">-------------/----------</option>
-                    <option value="">-------------/----------</option>
-                    <option value="">-------------/----------</option>
+            <form method="POST" name="form1" id="form1" action="php/registrarusu.php" autocomplete="off">
+                <div class="contenedor">
+                    <div class="primera">
+                            <!--USERNAME INPUT-->
+                        <div class="ads">
+                            <label for="username">DOCUMENTO</label>
+                            <input type="text" name="documento"  id="usuario">
+
+                        </div>    
+                       
+                        <!--tip_usu INPUT-->
+                        <div class="ads">
+                            <label for="tip_docu">TIPO DE DOCUMENTO </label>
+                            <select name="tip_docu" id="tip_docu">
+                                <option value="">-------------/----------</option>
+                                <option value="">-------------/----------</option>
+                                <option value="">-------------/----------</option>
                     
-                </select>
-                <!-- TIPO DE DOCUMENTO -->
-                <label for="tip_docu">TIPO DE DOCUMENTO</label>
-                <select name="tip_docu" id="tip_docu">
-                    <option value="">-------------/----------</option>
-                    <option value="">-------------/----------</option>
-                    <option value="">-------------/----------</option>
-                    
-                </select>
-                <!--PASSWORD INPUT-->
-                <label for="nombre">NOMBRE</label>
-                <input type="text" name="nombre" id="apellido">
-                <!--PASSWORD INPUT-->
-                <label for="password">APELLIDO</label>
-                <input type="text" name="apellido" id="apellido">
-                <!--PASSWORD INPUT-->
-                <label for="edad">EDAD</label>
-                <input type="text" name="edad" id="edad">
-                <!--PASSWORD INPUT-->
-                <label for="password">APELLIDO</label>
-                <input type="text" name="apellido" id="apellido">
-
-
+                            </select>
+                        </div>
+                      
+                
+                        <!-- TIPO DE DOCUMENTO -->
+                      <div class="ads">
+                        <label for="tip_docu">TIPO DE DOCUMENTO</label>
+                        <select name="tip_docu" id="tip_docu">
+                            <option value="">-------------/----------</option>
+                            <option value="">-------------/----------</option>
+                            <option value="">-------------/----------</option>
+                            
+                        </select>
+                      </div>
+                
+                        <!--PASSWORD INPUT-->
+                        <div class="ads">
+                            <label for="nombre">NOMBRE</label>
+                            <input type="text" name="nombre" id="apellido">
+                        </div>
+                    </div>
+                
+                    <div class="segunda">
+                        <!--PASSWORD INPUT-->
+                        <div class="ads">
+                            <label for="password">APELLIDO</label>
+                            <input type="text" name="apellido" id="apellido" >
+                        </div>
+                
+                        <!--PASSWORD INPUT-->
+                        <div class="ads">
+                            <label for="edad">EDAD</label>
+                            <input type="text" name="edad" id="edad">   
+                        </div>
+                
+                        <!--PASSWORD INPUT-->
+                        <div class="ads">
+                            <label for="telefono">TELEFONO</label>
+                            <input type="text" name="telefono" id="telefono">
+                        </div>
+                
+                        <!--PASSWORD INPUT-->
+                        <div class="ads">
+                            <label for="clave">CLAVE</label>
+                            <input type="password" name="clave" id="clave">
+                        </div>
+                    </div> 
+                </div>
+              
+                
 
                 <input type="submit" name="inicio" id="inicio" value="ingresar">
                 <input id="btn-iniciar-sesion" type="button" value="INICIAR SESION">
