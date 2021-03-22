@@ -1,10 +1,62 @@
-body {
-    margin: 0;
+*{
+    margin:0;
     padding: 0;
-    background: url(../img/fondoindex.png) no-repeat;
-    font-family: 'Julius Sans One', sans-serif;  
-    height: 100vh;
+    box-sizing: border-box;
 }
+
+:root{
+    --colorFondo: rgba(102, 51, 153, 0.315);
+
+}
+
+header{
+    background: var(--colorFondo);
+}
+
+/* imagen de logo */
+.content-img{
+    width: 20%;
+    margin-left: 1%;
+}
+
+.img-logo{
+    width: 135px;
+}
+
+/* opciones de menu */
+.menu{
+    
+    border: 1px solid red;
+}
+
+.menu ul{   
+    display: flex;
+    margin-left: 10px;
+
+}
+
+.menu ul li{
+    margin-left: 10px;
+    padding: 10px;
+    border-right: 1px solid black;
+    list-style-type: none;
+}
+
+.menu ul li:hover{
+    background: rgba(238, 130, 238, 0.438);
+}
+
+.menu ul li a{
+    padding: 10px;
+   
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+
+/* -----------------------crear empleado----------------------------------------- */
 
 .login-box {
     width: 40%;
@@ -104,6 +156,9 @@ select{
     gap:40px;
 }
 
+.inicioSesion{
+    margin-top: 16%;
+}
 
 
 
@@ -111,7 +166,6 @@ select{
 
 
 
-/* desaperecer ventana */
-/* .inicioSesion{
-    display: none;
-} */
+
+
+

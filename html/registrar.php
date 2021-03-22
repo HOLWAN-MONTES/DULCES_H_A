@@ -1,3 +1,16 @@
+<?php
+    require '../connection/connection.php';
+?>
+
+
+<!-- tipo de documento -->
+<?php
+    $sql = "SELECT * FROM tipo_documento";
+    $query = mysqli_query($mysqli, $sql);
+    $fila = mysqli_fetch_assoc($query);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,77 +28,76 @@
         <div class="inicioSesion" id="inicioSesion">
             <h1>REGISTRATE</h1>
 
-            <form method="POST" name="form1" id="form1" action="php/registrarusu.php" autocomplete="off">
+            <form method="POST" name="form1" id="form1" action="../php/registrarusu.php" autocomplete="off">
                 <div class="contenedor">
                     <div class="primera">
                             <!--USERNAME INPUT-->
                         <div class="ads">
                             <label for="username">DOCUMENTO</label>
-                            <input type="text" name="documento"  id="usuario">
+                            <input type="text" name="documento"  id="usuario" pattern="[0-9] {7-12}" title="minimo 7 digitos" required>
 
                         </div>    
                        
                         <!--tip_usu INPUT-->
                         <div class="ads">
                             <label for="tip_docu">TIPO DE DOCUMENTO </label>
-                            <select name="tip_docu" id="tip_docu">
-                                <option value="">-------------/----------</option>
-                                <option value="">-------------/----------</option>
-                                <option value="">-------------/----------</option>
+                            <select name="tip_docu" id="tip_docu" required>   
+                            <option >Seleccione el documento</option>                             
+                            <?php
+                                foreach ($query as $tip) : ?>
+
+                                <option required value="<?php echo $tip['tip_docu'] ?> "><?php echo $tip['nom_tip_docu'] ?> </option>
+                            <?php
+                             endforeach;
+                            ?>
                     
                             </select>
                         </div>
                       
                 
-                        <!-- TIPO DE DOCUMENTO -->
-                      <div class="ads">
-                        <label for="tip_docu">TIPO DE DOCUMENTO</label>
-                        <select name="tip_docu" id="tip_docu">
-                            <option value="">-------------/----------</option>
-                            <option value="">-------------/----------</option>
-                            <option value="">-------------/----------</option>
-                            
-                        </select>
-                      </div>
-                
-                        <!--PASSWORD INPUT-->
+                        <!-- TIPO DE usuario -->
+                        <input type="hidden" name="tip_usu" value="2">
+
+                        <!--nombre INPUT-->
                         <div class="ads">
                             <label for="nombre">NOMBRE</label>
-                            <input type="text" name="nombre" id="apellido">
+                            <input type="text" name="nombre" id="apellido" required>
                         </div>
+                          <!--apellido INPUT-->
+                          <div class="ads">
+                            <label for="password">APELLIDO</label>
+                            <input type="text" name="apellido" id="apellido"required >
+                        </div>
+                
                     </div>
                 
                     <div class="segunda">
-                        <!--PASSWORD INPUT-->
-                        <div class="ads">
-                            <label for="password">APELLIDO</label>
-                            <input type="text" name="apellido" id="apellido" >
-                        </div>
-                
+                      
                         <!--PASSWORD INPUT-->
                         <div class="ads">
                             <label for="edad">EDAD</label>
-                            <input type="text" name="edad" id="edad">   
+                            <input type="text" name="edad" id="edad" required>   
                         </div>
                 
                         <!--PASSWORD INPUT-->
                         <div class="ads">
                             <label for="telefono">TELEFONO</label>
-                            <input type="text" name="telefono" id="telefono">
+                            <input type="text" name="telefono" id="telefono" required>
                         </div>
                 
                         <!--PASSWORD INPUT-->
                         <div class="ads">
                             <label for="clave">CLAVE</label>
-                            <input type="password" name="clave" id="clave">
+                            <input type="password" name="clave" id="clave" required>
                         </div>
                     </div> 
                 </div>
               
                 
 
-                <input type="submit" name="inicio" id="inicio" value="ingresar">
-                <input id="btn-iniciar-sesion" type="button" value="INICIAR SESION">
+                <input type="submit" name="inicio" id="inicio" value="REGISTRAR"> <br>
+                <a href="../index.html">INICIAR SESION</a>
+               
             </form>
         </div>
 
