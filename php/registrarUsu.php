@@ -9,7 +9,7 @@
             $telefono = $_POST['telefono'];
             $clave = $_POST['clave'];
             
-        
+
             if($documento != "" &&  $tip_docu != "" && $tip_usu != "" && $nombre != "" && $edad != "" && $telefono != "" && $clave != "" && $apellido != ""){
               
                 $consultaF = "INSERT INTO usuario(documento, tip_docu, tip_usu, nombre, apellido, edad, telefono,clave)
@@ -17,7 +17,7 @@
                 
                 $resultadoF = mysqli_query($mysqli,$consultaF);
                
-                if($resultadoF ){
+                if($resultadoF){
                     if( $tip_usu == 2){
                         echo '<script> alert("El CLIENTE FUE REGISTRADO CON EXITO"); </script>';
                         header("location: ../index.html");
@@ -25,7 +25,6 @@
                     }elseif($tip_usu == 3){
                         echo '<script> alert("El EMPLEADO FUE REGISTRADO CON EXITO"); </script>';
                         header("location: ../html/crearDO.php");
-                        
                     }
             
     
