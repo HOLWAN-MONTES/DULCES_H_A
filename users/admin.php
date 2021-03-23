@@ -16,6 +16,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Merienda:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/LOGOL.png" type="image/x-icon">
+
     <title>ADMIN</title>
 </head>
 <body>
@@ -33,7 +36,7 @@
             </ul>
         </div>
     </header>
-    hola admin  <?= $_SESSION['nombre']?> <br>
+    BIENVENIDO ADMINISTRADOR  <?= $_SESSION['nombre']?> <br>
     <a href="../php/cerrar.php">cerrar aplicacion</a>
     <main>
     </main>

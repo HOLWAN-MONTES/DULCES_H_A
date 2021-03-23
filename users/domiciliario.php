@@ -18,7 +18,7 @@
     <title>Document</title>
 </head>
 <body>
-   hola domiciliario <?= $_SESSION['nombre']?> <br>
-    <a href="../php/cerrar.php">cerrar aplicacion</a>
+   BIENVENIDO DOMICILIARIO <?= $_SESSION['nombre']?> <br>
+    <a class="cerrar" href="../php/cerrar.php">cerrar aplicacion</a>
 </body>
 </html>
