@@ -28,7 +28,8 @@
             <ul>
                 <li><a href="">INICIO</a></li>
                 <li id="boton"><a id="boton" href="">CATALOGO DE PRODUCTOS</a></li>
-                <li><a href="">GENERAR COMPRA</a></li>
+                <a href=""><i class="icono fas fa-cart-arrow-down"></i></a>
+                <span class="carrito" id="carrito">0</span>
             </ul>
         </div>
     </header>
@@ -185,6 +186,9 @@
         </div>
     </div>
     <script src="../javasCript/main.js"></script>
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
