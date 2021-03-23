@@ -73,6 +73,11 @@ body {
 
 }
 
+.wenas{
+    
+}
+
+
 .login-box input[type="submit"]:hover {
     cursor: pointer;
     background: rgb(157, 0, 79);

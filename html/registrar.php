@@ -34,7 +34,7 @@
                             <!--USERNAME INPUT-->
                         <div class="ads">
                             <label for="username">DOCUMENTO</label>
-                            <input type="text" name="documento"  id="usuario" pattern="[0-9] {7-12}" title="minimo 7 digitos" required>
+                            <input  type="text" name="documento"  id="usuario" title="minimo 7 digitos" required  pattern="[A-Za-zO-9]{5,40}" title="letras y numeros , tmaño jdnajdnas">
 
                         </div>    
                        

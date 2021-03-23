@@ -8,7 +8,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +54,7 @@
                 <h2>$ 14,900</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador" min="1" max="50">
+                    <input type="number" name="" value="1" id="contador">
                     <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
                 </div>
 
@@ -68,7 +67,7 @@
                 <h2>$ 14,900</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador" min="1" max="50">
+                    <input type="number" name="" value="1" id="contador">
                     <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
 
                 </div>
@@ -82,7 +81,7 @@
                 <h2>$ 14,900</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador" min="1" max="50">
+                    <input type="number" name="" value="1" id="contador">
                     <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
 
                 </div>
@@ -102,7 +101,7 @@
                 <h2>$ 11,900</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador" min="1" max="50">
+                    <input type="number" name="" value="1" id="contador">
                     <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
 
                 </div>
@@ -117,7 +116,7 @@
                 <h2>$ 6,500</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador" min="1" max="50">
+                    <input type="number" name="" value="1" id="contador">
                     <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
 
                 </div>
@@ -132,7 +131,7 @@
                 <h2>$ 5,900</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador" min="1" max="50">
+                    <input type="number" name="" value="1" id="contador">
                     <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
 
                 </div>
@@ -150,7 +149,7 @@
                 <h2>$ 5,900</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador" min="1" max="50">
+                    <input type="number" name="" value="1" id="contador">
                     <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
 
                 </div>
@@ -164,7 +163,7 @@
                 <h2>$ 4,500</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador" min="1" max="50">
+                    <input type="number" name="" value="1" id="contador">
                     <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
 
                 </div>
@@ -179,7 +178,7 @@
                 <h2>$ 3,900</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador" min="1" max="50">
+                    <input type="number" name="" value="1" id="contador">
                     <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
 
                 </div>
