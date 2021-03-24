@@ -18,11 +18,12 @@
                 if($resultadoF){
                     if( $tip_usu == 2){
                         echo '<script> alert("El CLIENTE FUE REGISTRADO CON EXITO"); </script>';
-                        header("location: ../index.html");
+                        echo '<script>window.location="  ../index.html"</script>';
                         
                     }elseif($tip_usu == 3){
                         echo '<script> alert("El EMPLEADO FUE REGISTRADO CON EXITO"); </script>';
-                        header("location: ../html/crearDO.php");
+                        echo '<script>window.location="  ../html/crearDO.php"</script>';
+                        
                     }
         
                 }else{
