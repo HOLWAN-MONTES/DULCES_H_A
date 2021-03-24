@@ -7,7 +7,7 @@
 }
 
 :root{
-    --colorFondo: rgba(102, 51, 153, 0.315);
+    --colorFondo: rgb(143, 1, 72);
 
 }
 
@@ -28,7 +28,7 @@ header{
 /* opciones de menu */
 .menu{
     
-    border-top: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .menu ul{   
@@ -41,17 +41,16 @@ header{
     margin-left: 10px;
     padding: 10px;
     list-style-type: none;
-   
 }
 
-.menu ul li:hover{
-    background: rgba(238, 130, 238, 0.438);
+.menu ul li a:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(143, 0, 71);
 }
-
 
 .menu ul li a{
-    
     padding: 10px;
+    color: white;
     text-decoration: none;
     list-style: none;
 }
@@ -161,6 +160,8 @@ select{
 /* -----------------------buscar producto----------------------------------------- */
 
 .buscarproducto{
+    background-color: rgba(231, 189, 198, 0.774);
+    border-radius: 10px;
     color: rgb(157, 0, 79);
     top: 60%;
     left: 30%;
@@ -172,14 +173,14 @@ select{
 }
 
 .buscarproducto h1 {
-    margin: 0;
+    margin: 20px;
     padding: 0 0 20px;
     text-align: center;
     font-size: 27px;
 }
 
 .buscarproducto label {
-    margin: 0;
+    margin: -15px;
     padding: 0;
     font-weight: bold;
     display: block;
@@ -187,8 +188,9 @@ select{
 }
 
 .buscarproducto input {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 80%;
+    margin-bottom: 10px;
+    margin-left: 30px;
     
 }
 
@@ -246,15 +248,18 @@ select{
 }
 
 .consulta td{
-    border: 1px solid rgb(109, 0, 45);
+    border: 2px solid rgb(109, 0, 45);
     color: black;
     font-family:monospace;
     font-size: 15px;
+    text-align: center;
  
 }
 .consulta .nn{
     text-align: center;
-    font-family: 'Julius Sans One', sans-serif;  
+    font-family: 'Julius Sans One', sans-serif; 
+    font-size: 20px; 
+    font-weight: 900;
 
 }
 
