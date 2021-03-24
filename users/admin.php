@@ -29,8 +29,7 @@
         <div class="menu">
             <ul>
                 <li><a href="">INICIO</a></li>
-                <li><a href="">FORMULARIO</a></li>
-                <li><a href="">ACTIVIDAD</a></li>
+                <li><a href="../html/buscarProduc">ACTIVIDAD</a></li>
                 <li><a href="../html/crearDO.php">CREAR EMPLEADO</a></li>
             </ul>
         </div>
