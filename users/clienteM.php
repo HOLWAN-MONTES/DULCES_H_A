@@ -50,7 +50,7 @@
                 <h4>Trululu Snacks Aros/Caja x 12 Bolsas</h4><br>
                 <p>Aros de gomita aciditos, doble sabor frutal. </p>
                 <br>
-                <h2>$ 14,900</h2><br>
+                <h2>$ 14,999</h2><br>
 
                 <div class="contador">
                     <input type="number" name="" value="1" id="contador">
@@ -63,7 +63,7 @@
                 <h4>Trululu Snacks Casquitos/Caja x 12 Bolsas</h4><br>
                 <p>Deliciosos casquitos de gomita sabor a mandarina con vitamina C</p>
                 <br>
-                <h2>$ 14,900</h2><br>
+                <h2>$ 14,999</h2><br>
 
                 <div class="contador">
                     <input type="number" name="" value="1" id="contador">
@@ -77,7 +77,7 @@
                 <h4>Trululu Snacks Dinos/Caja x 12 bolsas</h4><br>
                 <p>Increíbles dinosaurios de gomita. Puedes compartirlos, ¡o comértelos solo!</p>
                 <br>
-                <h2>$ 14,900</h2><br>
+                <h2>$ 14,999</h2><br>
 
                 <div class="contador">
                     <input type="number" name="" value="1" id="contador">
