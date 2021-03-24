@@ -228,7 +228,7 @@ select{
 .consulta{
     color: rgb(157, 0, 79);
     top: 60%;
-    left: 60%;
+    left: 65%;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
@@ -272,4 +272,44 @@ input[type=number] { -moz-appearance:textfield; }
 
 .codigo{
     text-align: center;
+}
+
+.tabla{
+    color: rgb(157, 0, 79);
+    top: 110%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px;
+} 
+.tabla h1{
+    margin: 10px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.tabla .datos{
+    border: 1px solid rgb(109, 0, 45);
+
+}
+.tabla caption{
+    font-weight: 900;
+}
+
+.tabla td{
+    border: 2px solid rgb(109, 0, 45);
+    color: black;
+    font-size: 15px;
+    text-align: center;
+ 
+}
+
+.tabla .nn{
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif; 
+    font-size: 20px; 
+    font-weight: 900;
+
 }
