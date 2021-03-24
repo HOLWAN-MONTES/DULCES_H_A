@@ -1,14 +1,13 @@
 <?php
+
     session_start();
     $documento =$_SESSION["documento"];
     if ($documento == "" || $documento == null) {
         header("location: ../index.html");
     }
+
     require '../connection/connection.php';
-
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
