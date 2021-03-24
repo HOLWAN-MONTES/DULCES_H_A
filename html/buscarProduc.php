@@ -136,7 +136,7 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
 <div class="tabla">
 
 <h1> PROCUCTOS POR VENCER</h1>
-    <table class="datos" >
+    <table class="datos" style="border-collapse: collapse;">
         <caption>PRODUCTOS PROXIMOS A VENCER CON UN RANGO DE 20 DIAS  A LA FECHA</caption>
 		<tr class="nn">
 			<td>CODIGO DE PRODUCTO</td>
@@ -147,7 +147,7 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
             <td>PRECIO</td>	
             <td>FECHA DE VENCIMIENTO</td>
             <td>DIAS FALTANTES</td>
-	
+
 		</tr>
 
 		<?php 
@@ -162,8 +162,9 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
             $vencimiento = date_create($ddd);
             $dias = date_diff($holaaa,$vencimiento);
             $dia = $dias->format("%R%a dia");
-
+            $gola = 'style="color:red;"';
             if($dia <=20){
+
             ?>
             <tr>
                 <td><?php echo $mostrar['id_productos'] ?></td>
@@ -173,7 +174,7 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
                 <td><?php echo $mostrar['nom_marca'] ?></td>
                 <td><?php echo $mostrar['precio'] ?></td>
                 <td><?php echo $mostrar['fecha_vencimiento'] ?></td>
-                <td><?php echo $dia ?></td>
+                <td <?php if($dia < 1){echo $gola;}  ?> ><?php echo $dia ?></td>
 		    </tr>
             <?php
             }

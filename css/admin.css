@@ -275,6 +275,8 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 /*tabla de mostrar los productos*/
+
+
 .tabla{
     color: rgb(157, 0, 79);
     top: 110%;
@@ -283,6 +285,7 @@ input[type=number] { -moz-appearance:textfield; }
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 30px;
+    margin-top: 4%;
 } 
 .tabla h1{
     margin: 10px;
