@@ -12,9 +12,7 @@
 
             if($documento != "" &&  $tip_docu != "" && $tip_usu != "" && $nombre != "" && $edad != "" && $telefono != "" && $clave != "" && $apellido != ""){
               
-                $consultaF = "INSERT INTO usuario(documento, tip_docu, tip_usu, nombre, apellido, edad, telefono,clave)
-                 VALUES ('$documento','$tip_docu', '$tip_usu','$nombre', '$apellido', '$edad', '$telefono', '$clave')";
-                
+                $consultaF = "INSERT INTO usuario(documento, tip_docu, tip_usu, nombre, apellido, edad, telefono,clave) VALUES ('$documento','$tip_docu', '$tip_usu','$nombre', '$apellido', '$edad', '$telefono', '$clave')";
                 $resultadoF = mysqli_query($mysqli,$consultaF);
                
                 if($resultadoF){
@@ -26,13 +24,11 @@
                         echo '<script> alert("El EMPLEADO FUE REGISTRADO CON EXITO"); </script>';
                         header("location: ../html/crearDO.php");
                     }
-            
-    
+        
                 }else{
                     
                     echo '<script> alert("VERIFICA QEU TUS DATOS ESTEN LLENOS CORRECTAMENTE "); </script>';
-                    header("location: ../index.html");
-                        
+                    
                 
                 }
             }else{

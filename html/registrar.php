@@ -28,13 +28,13 @@
         <div class="inicioSesion" id="inicioSesion">
             <h1>REGISTRATE</h1>
 
-            <form method="POST" name="form1" id="form1" action="../php/registrarusu.php" autocomplete="off">
+            <form method="POST" id="form1" action="../php/registrarusu.php" autocomplete="off">
                 <div class="contenedor">
                     <div class="primera">
                             <!--USERNAME INPUT-->
                         <div class="ads">
                             <label for="username">DOCUMENTO</label>
-                            <input  type="text" name="documento"  id="usuario" title="minimo 7 digitos" required  pattern="[A-Za-zO-9]{5,40}" title="letras y numeros , tmaño jdnajdnas">
+                            <input  type="text" name="documento"  id="usuario" required pattern="[0-9]{9,12}" title="SOLO números. Tamaño mínimo: 9. Tamaño máximo: 12">
 
                         </div>    
                        
@@ -53,20 +53,19 @@
                     
                             </select>
                         </div>
-                      
-                
+                        
                         <!-- TIPO DE usuario -->
                         <input type="hidden" name="tip_usu" value="2">
 
                         <!--nombre INPUT-->
                         <div class="ads">
                             <label for="nombre">NOMBRE</label>
-                            <input type="text" name="nombre" id="apellido" required>
+                            <input type="text" name="nombre" id="apellido" required pattern="[0-9]{9,12}" title="SOLO números. Tamaño mínimo: 9. Tamaño máximo: 12">
                         </div>
                           <!--apellido INPUT-->
                           <div class="ads">
                             <label for="password">APELLIDO</label>
-                            <input type="text" name="apellido" id="apellido"required >
+                            <input type="text" name="apellido" id="apellido" required pattern="[0-9]{9,12}" title="SOLO números. Tamaño mínimo: 9. Tamaño máximo: 12" >
                         </div>
                 
                     </div>
@@ -76,7 +75,7 @@
                         <!--PASSWORD INPUT-->
                         <div class="ads">
                             <label for="edad">EDAD</label>
-                            <input type="text" name="edad" id="edad" required>   
+                            <input type="text" name="edad" id="edad"  required pattern="[0-9]{1,2}" title="SOLO números. Tamaño mínimo: 1. Tamaño máximo: 2">   
                         </div>
                 
                         <!--PASSWORD INPUT-->
