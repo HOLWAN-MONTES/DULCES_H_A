@@ -155,14 +155,15 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
 		$result=mysqli_query($mysqli,$sql);
 
 		while($mostrar=mysqli_fetch_array($result)){
-           
             $fechaac = date ("Y-m-d");
             $holaaa= date_create ($fechaac);
             $ddd= $mostrar['fecha_vencimiento'];
             $vencimiento = date_create($ddd);
             $dias = date_diff($holaaa,$vencimiento);
             $dia = $dias->format("%R%a dia");
-            $gola = 'style="color:red;"';
+            $gola = 'style="background:red;color:white;"';
+            $gola2 = 'style="background:orangered;color:white;"';
+            $gola3 = 'style="background:green;color:white;"';
             if($dia <=20){
 
             ?>
@@ -174,7 +175,7 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
                 <td><?php echo $mostrar['nom_marca'] ?></td>
                 <td><?php echo $mostrar['precio'] ?></td>
                 <td><?php echo $mostrar['fecha_vencimiento'] ?></td>
-                <td <?php if($dia < 1){echo $gola;}  ?> ><?php echo $dia ?></td>
+                <td <?php if($dia < 1){echo $gola;}elseif($dia <= 5){echo $gola2;}elseif($dia >= 6){echo $gola3;}?> ><?php echo $dia ?></td>
 		    </tr>
             <?php
             }
