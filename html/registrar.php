@@ -92,7 +92,7 @@
                     </div> 
                 </div>
               
-                
+
 
                 <input type="submit" name="inicio" id="inicio" value="REGISTRAR"> <br>
                 <a href="../index.html">INICIAR SESION</a>

@@ -103,15 +103,16 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
                         
             ');        
         }
+        $fechaac = date ("Y-m-d");
+        $holaaa= date_create ($fechaac);
+        $ddd= $info['fecha_vencimiento'];
+        $vencimiento = date_create($ddd);
+        $dias = date_diff($holaaa,$vencimiento);
+        $dia = $dias->format("%R%a");
     }
 
 }
 
 
-$fechaac = date ("Y-m-d");
-    $holaaa= date_create ($fechaac);
-    $ddd= $info['fecha_vencimiento'];
-    $vencimiento = date_create($ddd);
-    $dias = date_diff($holaaa,$vencimiento);
-    $dia = $dias->format("%R%a");
+
 ?>
