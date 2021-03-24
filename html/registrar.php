@@ -1,7 +1,14 @@
 <?php
     require '../connection/connection.php';
 ?>
-
+<?php
+    session_start();
+    $documento =$_SESSION["documento"];
+    if ($documento == "" || $documento == null) {
+        header("location: ../index.html");
+    }
+    require '../connection/connection.php';
+?>
 
 <!-- tipo de documento -->
 <?php
@@ -60,7 +67,7 @@
                         <!--nombre INPUT-->
                         <div class="ads">
                             <label for="nombre">NOMBRE</label>
-                            <input type="text" name="nombre" id="apellido" required pattern="[0-9]{9,12}" title="SOLO números. Tamaño mínimo: 9. Tamaño máximo: 12">
+                            <input type="text" name="nombre" id="apellido" required pattern="[A-Z]{1,40}" title="SOLO letras mayusculas, Tamaño máximo: 40">
                         </div>
                           <!--apellido INPUT-->
                           <div class="ads">
@@ -75,7 +82,7 @@
                         <!--PASSWORD INPUT-->
                         <div class="ads">
                             <label for="edad">EDAD</label>
-                            <input type="text" name="edad" id="edad"  required pattern="[0-9]{1,2}" title="SOLO números. Tamaño mínimo: 1. Tamaño máximo: 2">   
+                            <input type="text" name="edad" id="edad"  required pattern="[0-9]{2,2}" title="SOLO números. Tamaño mínimo: 1. Tamaño máximo: 2">   
                         </div>
                 
                         <!--PASSWORD INPUT-->
