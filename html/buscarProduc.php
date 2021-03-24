@@ -40,7 +40,6 @@
                 <input class="codigo" type="number" id="id_producto" name="id_producto">
             </div>
             <br>           
-            <br>
 
             <input id="boton" type="submit" name="iniciar" value="consultar">
             <input id="boton" type="hidden" name="MM_consulta" value="form1"/>
@@ -74,27 +73,31 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
             echo('
                 <div class="consulta">
                     <h1>DATOS DEL PRODUCTO</h1>
-                    <table>
-                        <td>codigo de producto: </td>
+                    <table class="datos">
+                        <td class="nn">NOMBRE</td>
+                        <td class="nn">DATO</td>
+                        </tr>
+                        <td>Codigo de Producto: </td>
                         <td>'.$info["id_productos"].'</td>
                         </tr>
-                        <td> nombre : </td>
+                        <td> Nombre : </td>
                         <td>'.$info["nom_tip_product"].'</td>
                         </tr>
-                        <td>TIPO de dulce: </td>;
+                        <td>Tipo de dulce: </td>;
                         <td>'.$info["nom_tip_dulces"].'</td>
                         </tr>
-                        <td> sabor: </td>
+                        <td> Sabor: </td>
                         <td>'.$info["nom_sabor"].'</td>
                         </tr>
                         <td>Marca: </td>
                         <td>'.$info["nom_marca"].'</td> 
                         </tr>
-                        <td>precio: </td>
-                        <td>'.$info["precio"].'</td> 
+                        <td>Precio: </td>
+                        <td>$'.$info["precio"].'</td> 
                         </tr>
-                        <td> fecha de vencimiento: </td>
+                        <td> Fecha de Vencimiento: </td>
                         <td>'.$info["fecha_vencimiento"].'</td> 
+                        
                     </table>
                 </div>  
                         
@@ -103,4 +106,12 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
     }
 
 }
+
+
+$fechaac = date ("Y-m-d");
+    $holaaa= date_create ($fechaac);
+    $ddd= $info['fecha_vencimiento'];
+    $vencimiento = date_create($ddd);
+    $dias = date_diff($holaaa,$vencimiento);
+    $dia = $dias->format("%R%a");
 ?>
