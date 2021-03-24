@@ -33,7 +33,7 @@ header{
 
 .menu ul{   
     display: flex;
-    margin-left: 28%;
+    margin-left: 35%;
 
 }
 
@@ -52,7 +52,6 @@ header{
 .menu ul li a{
     
     padding: 10px;
-   
     text-decoration: none;
     list-style: none;
 }
