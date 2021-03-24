@@ -1,7 +1,15 @@
 <?php
     require '../connection/connection.php';
 ?>
+<?php
+    session_start();
+    $documento =$_SESSION["documento"];
+    if ($documento == "" || $documento == null) {
+        header("location: ../index.html");
+    }
+    require '../connection/connection.php';
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +45,7 @@
 
             <div class= "buscaproduct">
                 <label for="tipo" class= "formulario" >CODIGO DE PRODUCTO:</label><br>     
-                <input class="codigo" type="number" id="id_producto" name="id_producto">
+                <input class="codigo" type="number" id="id_producto" name="id_producto" >
             </div>
             <br>           
 
@@ -70,10 +78,15 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
         $info = mysqli_fetch_assoc($sql);
 
         if ($info) {
-            echo('
-                <div class="consulta">
+            $_SESSION["id_productos"] = $info["id_productos"];
+            if($_SESSION["id_productos"] != $id_producto ){
+                echo '<script>alert ("El codigo del producto no existe ");</script>';
+                echo '<script>window.location="buscarProduc.php"</script>';
+            }else{
+                echo('
+                <div class="consulta" >
                     <h1>DATOS DEL PRODUCTO</h1>
-                    <table class="datos">
+                    <table class="datos" style="border-collapse: collapse;">
                         <td class="nn">NOMBRE</td>
                         <td class="nn">DATO</td>
                         </tr>
@@ -102,6 +115,11 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
                 </div>  
                         
             ');        
+            }
+            
+        }else{
+            echo '<script>alert ("El codigo del producto no existe ");</script>';
+            echo '<script>window.location="buscarProduc.php"</script>';
         }
         $fechaac = date ("Y-m-d");
         $holaaa= date_create ($fechaac);
