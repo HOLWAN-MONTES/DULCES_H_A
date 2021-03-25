@@ -25,7 +25,15 @@
         <div class="content-img">
             <img class="img-logo" src="../img/LOGOL.png" alt="">
         </div>
-
+        <div class="titulo">
+            <div style="color:white;font-size:30px;position:absolute;margin-top: -5%;margin-left:10%;">
+                BIENVENIDO ADMINISTRADOR  <?= $_SESSION['nombre']?> <br>
+            </div>
+            <div style="color:white;position:absolute;margin-top: -5%;margin-left:80%;">
+            <a style="text-decoration: none;color:white;" href="../php/cerrar.php">cerrar aplicacion</a>   
+            </div>
+            
+        </div>
         <div class="menu">
             <ul>
                 <li><a style="background:black;"href="">INICIO</a></li>
@@ -35,8 +43,9 @@
             </ul>
         </div>
     </header>
-    BIENVENIDO ADMINISTRADOR  <?= $_SESSION['nombre']?> <br>
-    <a href="../php/cerrar.php">cerrar aplicacion</a>
+    <div class="titulo">
+    </div>
+    
     <main>
     </main>
 

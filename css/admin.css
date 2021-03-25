@@ -156,6 +156,78 @@ select{
     margin-top: 16%;
 }
 
+/* -------------------------crear producto-------------------------------------- */
+.contCrearProduct{
+  
+    padding: 10px;
+    width: 50%;
+    margin-left: 25%;
+
+}
+.contenedora{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.primeraa{
+    margin: 20px;
+    
+}
+
+.segundaa{
+    margin: 10px;
+    
+    margin-top: 6%;
+}
+
+.contCrearProduct h1{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.aaaaa{
+    border:1px solid red;
+    padding: 20px;
+}
+
+.label{
+    color:  rgb(157, 0, 79);
+    font-size: 20px;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.adsa{
+    margin-bottom: 8%;
+}
+
+.btn{
+    outline: none;
+    height: 33px;
+    width: 40%;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-left: 30%;
+    background-color: rgb(157, 0, 79);
+    font-family: 'Julius Sans One', sans-serif;
+    border-style: none;
+    cursor: pointer;
+}
+
+.inpu{
+    border: none;
+    border-bottom: 3px solid rgb(157, 0, 79);
+    background: transparent;
+    outline: none;
+    height: 17px;
+    text-align: center  ;
+    width: 100%;
+    color: rgb(157, 0, 79);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
 
 /* -----------------------buscar producto----------------------------------------- */
 
@@ -164,6 +236,7 @@ select{
     border-radius: 10px;
     color: rgb(157, 0, 79);
     top: 60%;
+    margin-bottom: 40px;
     left: 30%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -279,7 +352,7 @@ input[type=number] { -moz-appearance:textfield; }
 
 .tabla{
     color: rgb(157, 0, 79);
-    top: 110%;
+    top: 130%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
