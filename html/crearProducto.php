@@ -57,7 +57,15 @@
         <div class="content-img">
             <img class="img-logo" src="../img/LOGOL.png" alt="">
         </div>
-
+        <div class="titulo">
+            <div style="color:white;font-size:30px;position:absolute;margin-top: -5%;margin-left:10%;">
+                BIENVENIDO ADMINISTRADOR  <?= $_SESSION['nombre']?> <br>
+            </div>
+            <div style="color:white;position:absolute;margin-top: -5%;margin-left:80%;">
+            <a style="text-decoration: none;color:white;" href="../php/cerrar.php">cerrar aplicacion</a>   
+            </div>
+            
+        </div>
         <div class="menu">
             <ul>
                 <li><a href="../users/admin.php">INICIO</a></li>
@@ -67,9 +75,7 @@
             </ul>
         </div>
     </header>
-    BIENVENIDO ADMINISTRADOR
-    <?= $_SESSION['nombre']?> <br>
-    <a href="../php/cerrar.php">cerrar aplicacion</a>
+  
     <main>
 
         <div class="contCrearProduct">
@@ -77,18 +83,18 @@
 
 
             <form method="POST" action="../php/crearProduct.php" autocomplete="off">
-                <div class="contenedor">
-                    <div class="primera">
+                <div class="contenedora">
+                    <div class="primeraa">
                         <!--numreferencia INPUT-->
-                        <div class="ads">
-                            <label for="username">NUMERO DE REFERENCIA </label>
-                            <input type="number" name="numref" required pattern="{1,25}" title="TAMAÑO MINIMO 1, MAXIMO 25">
+                        <div class="adsa">
+                            <label class="label" for="username">NUMERO DE REFERENCIA </label>
+                            <input class="inpu" type="number" name="numref" required pattern="{1,25}" title="TAMAÑO MINIMO 1, MAXIMO 25">
 
                         </div>
 
                         <!--tip_producto INPUT-->
-                        <div class="ads">
-                            <label for="tip_produc">TIPO DE PRODUCTO </label>
+                        <div class="adsa">
+                            <label class="label" for="tip_produc">TIPO DE PRODUCTO </label>
                             <select name="tip_produc" id="tip_produc" required>
                                 <option>Seleccione el documento</option>
                                 <?php
@@ -105,8 +111,8 @@
                         </div>
 
                         <!--MARCA INPUT-->
-                        <div class="ads">
-                            <label for="marca">MARCA</label>
+                        <div class="adsa">
+                            <label class="label" for="marca">MARCA</label>
                             <select name="marca" id="marca" required>
                                 <option>SELECCIONE LA MARCA DEL PRODUCTO</option>
 
@@ -123,8 +129,8 @@
                             </select>
                         </div>
                         <!--sabor INPUT-->
-                        <div class="ads">
-                            <label for="sabor">SABOR</label>
+                        <div class="adsa">
+                            <label class="label" for="sabor">SABOR</label>
                             <select name="sabor" id="sabor" required>
                                 <option>SELECCIONE LA sabor DEL PRODUCTO</option>
 
@@ -143,10 +149,17 @@
 
                     </div>
 
-                    <div class="segunda">
-                        <!--tip dulces INPUT-->
-                        <div class="ads">
-                            <label for="tip_dulces">TIPO DE DULCES</label>
+                    <div class="segundaa">
+                                  <!--precio INPUT-->
+                                  <div class="adsa">
+                            <label class="label" for="precio">PRECIO </label>
+                            <input class="inpu" name="precio" type="number" id="precio" required>
+                        </div>
+ 
+                    
+                    <!--tip dulces INPUT-->
+                        <div class="adsa">
+                            <label class="label" for="tip_dulces">TIPO DE DULCES</label>
                             <select name="tip_dulces" id="tip_dulces" required>
                                 <option>SELECCIONE EL TIPO DE DULCES </option>
 
@@ -162,16 +175,11 @@
 
                             </select>
                         </div>
-                        <!--precio INPUT-->
-                        <div class="ads">
-                            <label for="precio">PRECIO </label>
-                            <input name="precio" type="number" id="precio" required>
-                        </div>
-
+          
 
                         <!--FECHA INPUT-->
-                        <div class="ads">
-                            <label for="fechav">FECHA DE VENCIMIENTO</label>
+                        <div class="adsa">
+                            <label class="label" for="fechav">FECHA DE VENCIMIENTO</label>
                             <input type="date" name="fechav" id="fechav" required>
                         </div>
                        
@@ -182,7 +190,7 @@
 
 
 
-                <input type="submit" name="inicio" id="inicio" value="CREAR PRODUCTO"> <br>
+                <input class="btn" type="submit" name="inicio" id="inicio" value="CREAR PRODUCTO"> <br>
 
             </form>
         </div>

@@ -18,7 +18,27 @@
     <title>Document</title>
 </head>
 <body>
-   BIENVENIDO DOMICILIARIO <?= $_SESSION['nombre']?> <br>
-    <a class="cerrar" href="../php/cerrar.php">cerrar aplicacion</a>
+<header>
+        <div class="content-img">
+            <img class="img-logo" src="../img/LOGOL.png" alt="">
+        </div>
+        <div class="titulo">
+            <div style="color:white;font-size:30px;position:absolute;margin-top: -5%;margin-left:10%;">
+                BIENVENIDO ADMINISTRADOR  <?= $_SESSION['nombre']?> <br>
+            </div>
+            <div style="color:white;position:absolute;margin-top: -5%;margin-left:80%;">
+            <a style="text-decoration: none;color:white;" href="../php/cerrar.php">cerrar aplicacion</a>   
+            </div>
+            
+        </div>
+        <div class="menu">
+            <ul>
+            <!--     <li><a style="background:black;"href="">INICIO</a></li>
+                <li><a href="../html/buscarProduc.php">ACTIVIDAD</a></li>
+                <li><a href="../html/crearDO.php">CREAR EMPLEADO</a></li>
+                <li><a href="../html/crearProducto.php">CREAR PRODUCTO</a></li> -->
+            </ul>
+        </div>
+    </header>
 </body>
 </html>

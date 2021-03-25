@@ -27,6 +27,15 @@
         <div class="content-img">
             <img class="img-logo" src="../img/LOGOL.png" alt="">
         </div>
+        <div class="titulo">
+            <div style="color:white;font-size:30px;position:absolute;margin-top: -5%;margin-left:10%;">
+                BIENVENIDO ADMINISTRADOR  <?= $_SESSION['nombre']?> <br>
+            </div>
+            <div style="color:white;position:absolute;margin-top: -5%;margin-left:80%;">
+            <a style="text-decoration: none;color:white;" href="../php/cerrar.php">cerrar aplicacion</a>   
+            </div>
+            
+        </div>
 
         <div class="menu">
             <ul>
@@ -151,7 +160,7 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
 		</tr>
 
 		<?php 
-		$sql="SELECT productos.id_productos,tipo_producto.nom_tip_product,tipo_dulces.nom_tip_dulces,sabor.nom_sabor,marca_dulces.nom_marca, productos.precio, productos.fecha_vencimiento FROM productos,tipo_dulces,tipo_producto,sabor,marca_dulces  WHERE tipo_producto.id_tip_producto = productos.id_tip_producto AND tipo_dulces.id_tip_dulces = productos.id_tip_dulces AND sabor.id_sabor = productos.id_sabor AND marca_dulces.id_marca =productos.id_marca";
+		$sql="SELECT productos.id_productos,tipo_producto.nom_tip_product,tipo_dulces.nom_tip_dulces,sabor.nom_sabor,marca_dulces.nom_marca, productos.precio, productos.fecha_vencimiento FROM productos,tipo_dulces,tipo_producto,sabor,marca_dulces  WHERE tipo_producto.id_tip_producto = productos.id_tip_producto AND tipo_dulces.id_tip_dulces = productos.id_tip_dulces AND sabor.id_sabor = productos.id_sabor AND marca_dulces.id_marca =productos.id_marca order by fecha_vencimiento asc";
 		$result=mysqli_query($mysqli,$sql);
 
 		while($mostrar=mysqli_fetch_array($result)){
@@ -164,7 +173,7 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
             $gola = 'style="background:red;color:white;"';
             $gola2 = 'style="background:orangered;color:white;"';
             $gola3 = 'style="background:green;color:white;"';
-            if($dia <=20){
+            if($dia <20){
 
             ?>
             <tr>
