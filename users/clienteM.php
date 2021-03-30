@@ -1,4 +1,9 @@
 <?php
+    require '../connection/connection.php';
+
+?>
+
+<?php
     session_start();
     $documento =$_SESSION["documento"];
     if ($documento == "" || $documento == null) {
@@ -6,6 +11,10 @@
     }
     require '../connection/connection.php';
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +34,7 @@
         </div>
         <div class="titulo">
             <div style="color:white;font-size:30px;position:absolute;margin-top: -5%;margin-left:10%;">
-                BIENVENIDO ADMINISTRADOR  <?= $_SESSION['nombre']?> <br>
+                BIENVENIDO CLIENTE  <?= $_SESSION['nombre']?> <br>
             </div>
             <div style="color:white;position:absolute;margin-top: -5%;margin-left:80%;">
             <a style="text-decoration: none;color:white;" href="../php/cerrar.php">cerrar aplicacion</a>   
@@ -34,22 +43,19 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="">INICIO</a></li>
+                <li id="boton"><a id="boton" href="">CATALOGO DE PRODUCTOS</a></li>
+                <li id="boton"><a id="boton" href="">PRODUCTOS PEDIDOS</a></li>
                 <li id="boton"><a id="boton" href="">CATALOGO DE PRODUCTOS</a></li>
                 <a href=""><i class="icono fas fa-cart-arrow-down"></i></a>
-                <span class="carrito" id="carrito">0</span>
+                <span class="carrito" id="carrito"><?=$resultado ?></span>
             </ul>
         </div>
     </header>
-    <div class="texto" id="texto">
-    <p>BIENVENIDO CLIENTE <?= $_SESSION['nombre']?></p>
-    <br>
-    <a href="../php/cerrar.php">cerrar aplicacion</a>
-    </div>
+   
    
 
 
-    <div id="contenedor2" class="contenedor2">
+    <div  class="contenedor2">
 
         <p class="titulo2">PRODUCTOS TRULULU</p>
         <div class="tarjetas">
@@ -58,11 +64,14 @@
                 <h4>Trululu Snacks Aros/Caja x 12 Bolsas</h4><br>
                 <p>Aros de gomita aciditos, doble sabor frutal. </p>
                 <br>
+                <form action=""></form>
                 <h2>$ 14,999</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador">
-                    <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
+                    <form action="" method="POST">
+                        <input type="number " name="values" src="" alt="">
+                        <input type="submit" value="adasd">
+                    </form>
                 </div>
 
             </div>
@@ -74,9 +83,10 @@
                 <h2>$ 14,999</h2><br>
 
                 <div class="contador">
-                    <input type="number" name="" value="1" id="contador">
-                    <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
-
+                    <form action="" method="POST">
+                        
+                        <input type="submit" value="adasd">
+                    </form>
                 </div>
 
             </div>
@@ -201,3 +211,58 @@
 </body>
 </html>
 
+<!-- <script type="text/javascript">
+$(document).ready(function() {
+    $('#crearficha').click(function() {
+        var datosEmpres = $('#formularioFw').serialize();
+
+
+        $.ajax({
+            type: "POST",
+            url: "../php/crearFicha.php",
+            data: datosEmpres,
+            success: function(h) {
+
+                if (h == 1) {
+
+                    $('.agregoF').html(
+                        '<p id="sub_for_empresa"style="color:white;font-size:20px;text-align: center; background-color:#238276;padding:30px 30px;">SE AGREGO CORRECTAMENTE</p>'
+                    )
+                    setTimeout(() => {
+                        document.querySelector("#formularioFw").reset()
+                        $('.agregoF').html('<p></p>')
+                        window.location = "segui.php"
+                    }, 2000);
+
+
+
+
+                } else if (h == 2) {
+
+                    $('.agregoF').html(
+                        '<p id="nada" style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">La ficha ya esta creada </p>'
+                    )
+                    setTimeout(() => {
+
+                        $('.agregoF').html('<p></p>')
+                    }, 2000);
+                } else {
+
+                    $('.agregoF').html(
+                        '<p id="nada" style="color:white;font-size:20px;text-align: center; background-color:#fc7323;padding:30px 30px;">Verifica que los datos esten ingresados correctamente </p>'
+                    )
+                    setTimeout(() => {
+
+                        $('.agregoF').html('<p></p>')
+                    }, 2000);
+
+
+                }
+
+            }
+        });
+        return false;
+    });
+
+});
+</script> -->

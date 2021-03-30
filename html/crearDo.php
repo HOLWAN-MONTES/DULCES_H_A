@@ -142,6 +142,7 @@
                             <label for="clave">CLAVE</label>
                             <input type="password" name="clave" id="clave" required>
                         </div>
+                        <input type="hidden" name="">
                     </div> 
                 </div>
               

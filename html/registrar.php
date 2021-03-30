@@ -59,12 +59,12 @@
                         <!--nombre INPUT-->
                         <div class="ads">
                             <label for="nombre">NOMBRE</label>
-                            <input type="text" name="nombre" id="apellido" required pattern="[A-Z]{3,40}" title="SOLO letras mayusculas, Tamaño máximo: 40">
+                            <input type="text" name="nombre" id="apellido">
                         </div>
                           <!--apellido INPUT-->
                           <div class="ads">
                             <label for="password">APELLIDO</label>
-                            <input type="text" name="apellido" id="apellido" required pattern="[0-9]{2,12}" title="SOLO números. Tamaño mínimo: 9. Tamaño máximo: 12" >
+                            <input type="text" name="apellido" id="apellido" required >
                         </div>
                 
                     </div>
