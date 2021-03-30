@@ -3,7 +3,7 @@
   $hostname="localhost";
   $userName="root";
   $password= "";
-  $database="dulces";
+  $database="dul";
   $mysqli = new mysqli($hostname,$userName,$password,$database);
 
   if($mysqli ->connect_errno){
