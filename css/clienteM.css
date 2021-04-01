@@ -193,3 +193,95 @@ header{
     position: relative;
     text-decoration: none;
 }
+
+
+/*tabla de mostrar los productos*/
+
+
+.tabla{
+    color: rgb(157, 0, 79);
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px;
+    margin-top: 4%;
+} 
+.tabla h1{
+    margin: 10px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.tabla .datos{
+    border: 1px solid rgb(109, 0, 45);
+
+}
+.tabla caption{
+    font-weight: 900;
+}
+
+.tabla td{
+    border: 2px solid rgb(109, 0, 45);
+    color: black;
+    font-size: 15px;
+    text-align: center;
+ 
+}
+
+.tabla .nn{
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif; 
+    font-size: 20px; 
+    font-weight: 900;
+
+}
+
+/*tabla de mostrar los pedidos*/
+
+.pedido{
+    color: rgb(157, 0, 79);
+    top: 30%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px;
+    margin-top: 4%;
+} 
+.pedido h1{
+    margin: 10px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.pedido .datos{
+    border: 1px solid rgb(109, 0, 45);
+
+}
+
+.pedido td{
+    border: 2px solid rgb(109, 0, 45);
+    color: black;
+    font-size: 15px;
+    text-align: center;
+ 
+}
+
+.nn{
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif; 
+    font-size: 20px; 
+    font-weight: 900;
+
+
+}
+
+
+.hola td{
+    background-color: aqua;
+    padding: 0 15px 0 15px;
+}
