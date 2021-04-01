@@ -38,13 +38,16 @@
         
                 }else{
                     if( $tip_usu == 2){
-                        echo '<script> alert("VERIFICA QEU TUS DATOS ESTEN LLENOS CORRECTAMENTE "); </script>';
+                        echo '<script> alert("VERIFICA QUE TUS DATOS ESTEN LLENOS CORRECTAMENTE "); </script>';
                         echo '<script>window.location="  ../index.html"</script>';
                         
                     }elseif($tip_usu == 3){
-                        echo '<script> alert("VERIFICA QEU TUS DATOS ESTEN LLENOS CORRECTAMENTE "); </script>';
+                        echo '<script> alert("VERIFICA QUE TUS DATOS ESTEN LLENOS CORRECTAMENTE "); </script>';
                         echo '<script>window.location="  ../html/crearDO.php"</script>';
                         
+                    }elseif($tip_usu == 1){
+                        echo '<script> alert("VERIFICA QUE TUS DATOS ESTEN LLENOS CORRECTAMENTE "); </script>';
+                        echo '<script>window.location="  ../html/crearDO.php"</script>';
                     }
                     
                     
