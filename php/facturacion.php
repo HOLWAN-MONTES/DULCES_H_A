@@ -62,7 +62,7 @@
                         $resultadoFb = mysqli_query($mysqli,$consultab);
                         
                         
-                        if($resultadoF){
+                        if($resultadoFb){
                             echo '<script> alert("TODO SALIO BIEN "); </script>';
                             echo '<script>window.location="  ../users/clienteM.php"</script>'; 
                 
