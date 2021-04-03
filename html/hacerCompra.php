@@ -53,7 +53,7 @@
         </div>
     </header>
   
-    <div class="tabla">
+<div class="tabla" id="tabla">
 
 <h1> PROCUCTOS EN VENTA</h1>
     <table class="datos" style="border-collapse: collapse;width:900px;">
@@ -122,7 +122,7 @@
 	</table>
 </div>
 
-<form action="../php/crearfact.php" method="POST">
+<form id ="factura" method="POST">
     <input type="hidden" name="documento" value=" <?= $_SESSION['documento']?>">
     <input type="hidden" value="<?php echo $id_pro ?>" name="id_productos">
     <input type="hidden" value="<?php echo $mostrar['nom_tip_product'] ?>" name="nom_tip_product">
@@ -130,9 +130,24 @@
     <input type="hidden" value="<?php echo $mostrar['nom_sabor'] ?>" name="nom_sabor">
     <input type="hidden" value="<?php echo $mostrar['nom_marca'] ?>" name="nom_marca">
     <input type="hidden" value="<?php echo $mostrar['precio'] ?>" name="precio">
-     <input type="hidden" value="<?php echo $mostrar['fecha_vencimiento'] ?>" name="fecha_vencimiento">
+    <input type="hidden" value="<?php echo $mostrar['fecha_vencimiento'] ?>" name="fecha_vencimiento">
     <input type="hidden" name="numoer" id="" value = 0 >
-    <button type="submit">hcaer factura</button>
+    <button type="buttom" class="btn-hacerfactura" id="btn-hacerfactura">crear factura</button>
                 
 </form>
 
+<div class="direccion" id="direccion">
+
+    <form id="form_direccion" method="post" class="hacerCompras">
+        <label for="">DIRECCION A ENVIAR </label>
+        <input  type="text" value="" name="direccion"  placeholder="DIGITA LA DIRECCIÓN">
+        <button id="crearDireccion" class="BOTONeNVIAR" type="submit">CREAR</button>
+    </form>
+
+
+
+</div>
+
+
+<script src="../javasCript/main.js"></script>
+</body>

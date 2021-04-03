@@ -1,15 +1,15 @@
 <?php
 
 require_once("../connection/connection.php");
-$documento = $_POST['documento'];   echo '</br>';
-$id_productos = $_POST['id_productos'];echo '</br>';
-$nom_tip_product = $_POST['nom_tip_product'];echo '</br>';
-$nom_tip_dulces =$_POST['nom_tip_dulces'] ;echo '</br>';
-$nom_sabor =$_POST['nom_sabor'] ;echo '</br>';
-$nom_marca =$_POST['nom_marca'] ;echo '</br>';
-$precio = $_POST['precio'];echo '</br>';
-$fecha_vencimiento = $_POST['fecha_vencimiento'];echo '</br>';
-$numero_pedido = $_POST['numoer'];echo '</br>';
+$documento = $_POST['documento'];   
+$id_productos = $_POST['id_productos'];
+$nom_tip_product = $_POST['nom_tip_product'];
+$nom_tip_dulces =$_POST['nom_tip_dulces'] ;
+$nom_sabor =$_POST['nom_sabor'] ;
+$nom_marca =$_POST['nom_marca'] ;
+$precio = $_POST['precio'];
+$fecha_vencimiento = $_POST['fecha_vencimiento'];
+$numero_pedido = $_POST['numoer'];
 
 $time = time();
 $fechaActual = date("Y-m-d ", $time);
@@ -30,14 +30,21 @@ if($fila){
     $_SESSION["documento"] = $fila["documento"];
     /* ingresar a la factura  */
    
-        if( $numero_pedido != ""){
+        
 
 
             $consultaF = "INSERT INTO factura ( documento, fecha, documento_RE, hora, direccion, precio_total) VALUES ( '$documento', '$fechaActual', '$documentore;', '$hractual', 'ffffff', '0')";
             $resultadoF = mysqli_query($mysqli,$consultaF);
-        }else{
-            echo "salio mal";
-        }
+
+            if ($resultadoF) {
+                echo 1;
+              
+            }else{
+                echo 3;
+            }
+
+
+        
 
 
 }

@@ -207,6 +207,7 @@ header{
     box-sizing: border-box;
     padding: 30px;
     margin-top: 4%;
+    display: none ;
 } 
 .tabla h1{
     margin: 10px;
@@ -228,7 +229,7 @@ header{
     color: black;
     font-size: 15px;
     text-align: center;
- 
+    
 }
 
 .tabla .nn{
@@ -238,6 +239,20 @@ header{
     font-weight: 900;
 
 }
+
+/* hacer factura */
+.btn-hacerfactura{
+    width: 20%;
+    position: fixed;
+    font-size: 30px;
+    height: 100px;
+    border: 1px solid var(--colorFondo);
+    background-color: rgba(143, 1, 72, 0.432);
+    cursor: pointer;
+    display: block;
+}
+
+
 
 /*tabla de mostrar los pedidos*/
 
@@ -284,4 +299,57 @@ header{
 .hola td{
     background-color: aqua;
     padding: 0 15px 0 15px;
+}
+
+
+
+
+
+/* direccion donde va a hacer la compra  */
+.direccion{
+    background-color: rgba(143, 1, 72, 0.507);
+    width: 50%;
+    border-radius: 15px;
+    margin-top: 3%;
+    margin-left: 24%;
+    font-size: 30px;
+    text-align: center;
+    border: 3px solid rgb(143, 0, 71);
+    height: 300px;
+    display: block;
+    display: NONE;
+}
+
+.hacerCompras{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr ;
+    border-radius: 15px;
+    height:200px;
+    margin-top: 5%;
+    width: 100%;
+  
+ 
+}
+
+.hacerCompras input{
+    background-color:transparent;
+    font-size: 30px;
+    border: transparent;
+    text-align: center;
+    height: 38px;
+    width: 80%;
+    margin: 0 auto;    border-bottom:1px solid rgb(3, 3, 3);
+    color: white;
+    outline: none;
+}
+
+.BOTONeNVIAR{
+    outline: none;
+    width: 23%;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    border: rgb(143, 1, 72);
+    cursor: pointer;
 }

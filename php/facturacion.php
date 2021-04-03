@@ -63,8 +63,8 @@
                         
                         
                         if($resultadoFb){
-                            echo '<script> alert("TODO SALIO BIEN "); </script>';
-                            echo '<script>window.location="  ../users/clienteM.php"</script>'; 
+                            
+                            1
                 
                         }else{
                         
