@@ -71,12 +71,7 @@
                 <form action=""></form>
                 <h2>$ 14,999</h2><br>
 
-                <div class="contador">
-                    <form action="" method="POST">
-                        <input type="number " name="values" src="" alt="">
-                        <input type="submit" value="adasd">
-                    </form>
-                </div>
+              
 
             </div>
             <div class="card">
@@ -86,12 +81,7 @@
                 <br>
                 <h2>$ 14,999</h2><br>
 
-                <div class="contador">
-                    <form action="" method="POST">
-                        <input type="hidden" name="valor">
-                        <input type="submit" value="adasd">
-                    </form>
-                </div>
+               
 
             </div>
             <div class="card">
@@ -100,12 +90,6 @@
                 <p>Increíbles dinosaurios de gomita. Puedes compartirlos, ¡o comértelos solo!</p>
                 <br>
                 <h2>$ 14,999</h2><br>
-
-                <div class="contador">
-                    <input type="number" name="" value="1" id="contador">
-                    <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
-
-                </div>
 
             </div>
         </div>
@@ -121,11 +105,7 @@
                 <br>
                 <h2>$ 11,900</h2><br>
 
-                <div class="contador">
-                    <input type="number" name="" value="1" id="contador">
-                    <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
-
-                </div>
+              >
 
             </div>
             <div class="card">
@@ -136,11 +116,6 @@
                 <br>
                 <h2>$ 6,500</h2><br>
 
-                <div class="contador">
-                    <input type="number" name="" value="1" id="contador">
-                    <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
-
-                </div>
 
             </div>
             <div class="card">
@@ -150,12 +125,6 @@
                 Estos deliciosos bombones son perfectos para decorar cualquier mesa de dulces.</p>
                 <br>
                 <h2>$ 5,900</h2><br>
-
-                <div class="contador">
-                    <input type="number" name="" value="1" id="contador">
-                    <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
-
-                </div>
 
             </div>
         </div>
@@ -169,11 +138,7 @@
                 <br>
                 <h2>$ 5,900</h2><br>
 
-                <div class="contador">
-                    <input type="number" name="" value="1" id="contador">
-                    <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
-
-                </div>
+               
 
             </div>
             <div class="card">
@@ -183,11 +148,6 @@
                 <br>
                 <h2>$ 4,500</h2><br>
 
-                <div class="contador">
-                    <input type="number" name="" value="1" id="contador">
-                    <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
-
-                </div>
 
             </div>
             <div class="card">
@@ -198,11 +158,7 @@
                 <br>
                 <h2>$ 3,900</h2><br>
 
-                <div class="contador">
-                    <input type="number" name="" value="1" id="contador">
-                    <a href="" title="Agregar al carrito" class="btn" >Agregar</a>
-
-                </div>
+          
 
             </div>
         </div>

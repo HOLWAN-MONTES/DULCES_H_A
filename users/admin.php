@@ -47,7 +47,7 @@
         </div>
 
 
-        <div class="pedido">
+        <div class="pedido" >
 
             <h1> PEDIDOS</h1>
             <table class="datos" style="border-collapse: collapse;border:1px solid red;width:1300px;">
