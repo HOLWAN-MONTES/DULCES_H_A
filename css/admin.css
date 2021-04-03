@@ -395,13 +395,13 @@ input[type=number] { -moz-appearance:textfield; }
 
 .pedido{
     color: rgb(157, 0, 79);
-    top: 30%;
+   
     left: 50%;
-    position: absolute;
+    position: relative;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 30px;
-    margin-top: 4%;
+    margin-top: 15%;
 } 
 .pedido h1{
     margin: 10px;
