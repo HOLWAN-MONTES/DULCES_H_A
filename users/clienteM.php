@@ -50,85 +50,16 @@
             <ul>
                 <li id="boton"><a id="boton" href="">CATALOGO DE PRODUCTOS</a></li>
                 <li id="boton"><a id="boton" href="">PRODUCTOS PEDIDOS</a></li>
-                <li id="boton"><a id="boton" href="">CATALOGO DE PRODUCTOS</a></li>
+                <li id="boton"><a id="boton" href="../html/hacerCompra.php">HACER COMPRA</a></li>
                 <a href=""><i class="icono fas fa-cart-arrow-down"></i></a>
                 <span class="carrito" id="carrito"><?=$resultado ?></span>
             </ul>
         </div>
     </header>
   
-    <div class="tabla">
-
-<h1> PROCUCTOS EN VENTA</h1>
-    <table class="datos" style="border-collapse: collapse;width:900px;">
-        <caption></caption>
-		<tr class="nn hola">
-			<td>CODIGO DE PRODUCTO</td>
-			<td>NOMBRE</td>
-			<td>TIPO DE PRODUCTO</td>
-			<td>SABOR</td>
-			<td>MARCA</td>	
-            <td>PRECIO</td>	
-            <td>FECHA DE VENCIMIENTO</td>
-            <td>DIAS FALTANTES</td>
-            <td>NUMERO DE PEDIDOS</td>
-            <td>COMPRAR</td>
-
-
-		</tr>
-
-		<?php 
-		$sql="SELECT  productos.id_productos,tipo_producto.nom_tip_product,tipo_dulces.nom_tip_dulces,sabor.nom_sabor,marca_dulces.nom_marca, productos.precio, productos.fecha_vencimiento FROM productos,tipo_dulces,tipo_producto,sabor,marca_dulces  WHERE tipo_producto.id_tip_producto = productos.id_tip_producto AND tipo_dulces.id_tip_dulces = productos.id_tip_dulces AND sabor.id_sabor = productos.id_sabor AND marca_dulces.id_marca =productos.id_marca order by fecha_vencimiento asc";
-		$result=mysqli_query($mysqli,$sql);
-
-		while($mostrar=mysqli_fetch_array($result)){
-            $fechaac = date ("Y-m-d");
-            $holaaa= date_create ($fechaac);
-            $ddd= $mostrar['fecha_vencimiento'];
-            $vencimiento = date_create($ddd);
-            $dias = date_diff($holaaa,$vencimiento);
-            $dia = $dias->format("%R%a dia");
-            if($dia > 0){
-
-            ?>
-            <tr>
-                <td><?php echo $mostrar['id_productos'] ?></td>
-                <td><?php echo $mostrar['nom_tip_product'] ?></td>
-                <td><?php echo $mostrar['nom_tip_dulces'] ?></td>
-                <td><?php echo $mostrar['nom_sabor'] ?></td>
-                <td><?php echo $mostrar['nom_marca'] ?></td>
-                <td><?php echo $mostrar['precio'] ?></td>
-                <td><?php echo $mostrar['fecha_vencimiento'] ?></td>
-                <td <?php ?> ><?php echo $dia ?></td>
-                <div style="display:none;">
-                <form action="../php/facturacion.php" method="POST">
-                    <input type="hidden" name="documento" value=" <?= $_SESSION['documento']?>">
-                    <input type="hidden" value="<?php $mostrar['id_productos'] ?>" name="id_productos">
-                    <input type="hidden" value="<?php $mostrar['nom_tip_product'] ?>" name="nom_tip_product">
-                    <input type="hidden" value="<?php $mostrar['nom_tip_dulces'] ?>" name="nom_tip_dulces">
-                    <input type="hidden" value="<?php $mostrar['nom_sabor'] ?>" name="nom_sabor">
-                    <input type="hidden" value="<?php $mostrar['nom_marca'] ?>" name="nom_marca">
-                    <input type="hidden" value="<?php $mostrar['precio'] ?>" name="precio">
-                    <input type="hidden" value="<?php $mostrar['fecha_vencimiento'] ?>" name="fecha_vencimiento">
-                    <td><input type="number" name="numoer" id="" placeholder="numero de pedido" ></td>
-                    <td><button type="submit">COMPRAR</button></td>
-                </form>
-                </div>
-               
-            </tr>
-            <?php
-            }
-		 ?>	  
-	<?php
-	}   
-	 ?>
-	</table>
-</div>
-
-
 
     <!-- the pretty -->
-    <!-- <div  class="contenedor2">
+    <div  class="contenedor2">
 
         <p class="titulo2">PRODUCTOS TRULULU</p>
         <div class="tarjetas">
@@ -275,7 +206,7 @@
 
             </div>
         </div>
-    </div> -->
+    </div>
     <script src="../javasCript/main.js"></script>
 
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
