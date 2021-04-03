@@ -388,6 +388,7 @@ input[type=number] { -moz-appearance:textfield; }
     font-family: 'Julius Sans One', sans-serif; 
     font-size: 20px; 
     font-weight: 900;
+    background-color:rgba(109, 0, 45, 0.445) ;
 
 }
 
@@ -395,7 +396,6 @@ input[type=number] { -moz-appearance:textfield; }
 
 .pedido{
     color: rgb(157, 0, 79);
-   
     left: 50%;
     position: relative;
     transform: translate(-50%, -50%);
@@ -416,7 +416,7 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 .pedido td{
-    border: 2px solid rgb(109, 0, 45);
+    border: 1px solid rgb(109, 0, 45);
     color: black;
     font-size: 15px;
     text-align: center;
@@ -428,5 +428,8 @@ input[type=number] { -moz-appearance:textfield; }
     font-family: 'Julius Sans One', sans-serif; 
     font-size: 20px; 
     font-weight: 900;
+    background-color:rgba(109, 0, 45, 0.575);
+   
+
 
 }
