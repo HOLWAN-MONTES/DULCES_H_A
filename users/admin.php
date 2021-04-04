@@ -36,10 +36,10 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a style="background:black;"href="">INICIO</a></li>
+                    <li><a style="background:white;color:black;" href="">INICIO</a></li>
                     <li><a href="../html/buscarProduc.php">ACTIVIDAD</a></li>
                     <li><a href="../html/crearDO.php">CREAR EMPLEADO</a></li>
-                    <li><a href="../html/crearProducto.php">CREAR PRODUCTO</a></li>
+                    <li><a href="../html/crearProducto.php">ASIGNAR FECHA DE VENCIMIENTO</a></li>
                 </ul>
             </div>
         </header>
