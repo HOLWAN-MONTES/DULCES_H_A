@@ -38,8 +38,8 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="">PEDIDOS PENDIENTES</a></li>
-                <li><a href="../html/pedidosentregados.php">PEDIDOS ENTREGADOS</a></li>
+                <li><a href="../users/domiciliario.php">PEDIDOS PENDIENTES</a></li>
+                <li><a  href="">PEDIDOS ENTREGADOS</a></li>
 
             </ul>
         </div>
@@ -71,7 +71,7 @@
 
         <?php 
 
-            $sql= "SELECT factura.id_fac,detalle_de_factura.id_productos,tipo_producto.nom_tip_product,tipo_dulces.nom_tip_dulces, detalle_de_factura.cantidad,factura.precio_total,usuario.documento,usuario.nombre,usuario.apellido,factura.direccion,factura.fecha,factura.hora FROM detalle_de_factura,productos,tipo_producto,tipo_dulces,factura,usuario WHERE (detalle_de_factura.id_fac=factura.id_fac AND detalle_de_factura.id_productos=productos.id_productos AND productos.id_tip_producto=tipo_producto.id_tip_producto AND factura.id_estado = 3 AND productos.id_tip_dulces=tipo_dulces.id_tip_dulces AND factura.documento=usuario.documento) AND (factura.documento_RE= $documento) order by id_fac asc";
+            $sql= "SELECT factura.id_fac,detalle_de_factura.id_productos,tipo_producto.nom_tip_product,tipo_dulces.nom_tip_dulces, detalle_de_factura.cantidad,factura.precio_total,usuario.documento,usuario.nombre,usuario.apellido,factura.direccion,factura.fecha,factura.hora FROM detalle_de_factura,productos,tipo_producto,tipo_dulces,factura,usuario WHERE (detalle_de_factura.id_fac=factura.id_fac AND detalle_de_factura.id_productos=productos.id_productos AND productos.id_tip_producto=tipo_producto.id_tip_producto AND factura.id_estado = 4 AND productos.id_tip_dulces=tipo_dulces.id_tip_dulces AND factura.documento=usuario.documento) AND (factura.documento_RE= $documento) order by id_fac asc";
             $result=mysqli_query($mysqli,$sql);
 
         while($mostrar=mysqli_fetch_array($result)){
@@ -90,23 +90,11 @@
                 <td><?php echo $mostrar[9] ?></td>
                 <td><?php echo $mostrar[10] ?></td>
                 <td><?php echo $mostrar[11] ?></td>
-            
+            </tr>
             <?php
-             echo "<td><a href='domiciliario.php?id=$mostrar[0]&dulces=2'>preparar</a></td>";
-             echo "</tr>";
-             $No_fac = $mostrar[0];
             }
             ?>	  
-        <?php 
-        extract($_GET);
-        if(@$dulces==2){
-
-
-            $cambioEstado="UPDATE factura SET id_estado = 4 WHERE id_fac = '$No_fac' ";
-            $ejecutar=mysqli_query($mysqli,$cambioEstado);
-            echo '<script>alert("Pedido Entregado")</script> ';
-            echo "<script>location.href='domiciliario.php'</script>";
-        } 
+        <?php  
         ?>
     </table>
 </div>
