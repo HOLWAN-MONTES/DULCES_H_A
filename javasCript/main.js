@@ -28,52 +28,6 @@ const btn_factura = document.getElementById("btn-hacerfactura")
 const ContentDireccion = document.getElementById('direccion');
 const crearDireccion = document.getElementById('crearDireccion')
 
-/* comprar un producto */
-const boton_todos_los_productos = document.getElementById('boton_todos_los_productos');
-const form_todos_productos = document.getElementById('form_todos_productos');
-
-
-/* hacer las compras */
-boton_todos_los_productos.addEventListener("click", (e) => {
-  e.preventDefault()
-  const datos3 = new FormData(factura)
-
-  fetch("../php/facturacion.php", {
-    method:"POST",
-    body: datos3
-  }).then(res3 => res3.text()).then(info3 => {
-    console.log(info3)
-    if (info3 == 1) {   
-        alert('SU COMPRA DEL PRODUCTO FUE SACTISFACTORIA')
-    }else if (info3 == 2) {
-      alert("ELIJA UN PRODUCTO PARA PODER HACER LA COMPRA")
-    }else if (info3 == 3) {
-      alert("ELIJA UN PRODUCTO PARA PODER HACER LA COMPRA")
-    }  
-  })
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -117,13 +71,36 @@ crearDireccion.addEventListener("click", (o) => {
       ContentDireccion.style.display = "none" 
       tabla.style.display = "block";
     }else if (info2 == 2) {
-      alert("No se creo factura")
+      alert("No se hizo lo que usted quizo")
     } 
   })
 })
 
 
+/* comprar un producto */
+/* const boton_todos_los_productos = document.getElementById('boton_todos_los_productos');
+const form_todos_productos = document.getElementById('form_todos_productos'); */
 
+
+/* /* hacer las compras 
+boton_todos_los_productos.addEventListener("click", (e) => {
+  e.preventDefault()
+  const datos3 = new FormData(factura)
+
+  fetch("../php/facturacion.php", {
+    method:"POST",
+    body: datos3
+  }).then(res3 => res3.text()).then(info3 => {
+    console.log(info3)
+    if (info3 == 1) {   
+        alert('SU COMPRA DEL PRODUCTO FUE SACTISFACTORIA')
+    }else if (info3 == 2) {
+      alert("ELIJA UN PRODUCTO PARA PODER HACER LA COMPRA")
+    }else if (info3 == 3) {
+      alert("ELIJA UN PRODUCTO PARA PODER HACER LA COMPRA")
+    }  
+  })
+}) */
 
 
 

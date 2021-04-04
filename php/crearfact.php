@@ -33,7 +33,7 @@ if($fila){
         
 
 
-            $consultaF = "INSERT INTO factura ( documento, fecha, documento_RE, hora, direccion, precio_total) VALUES ( '$documento', '$fechaActual', '$documentore;', '$hractual', 'ffffff', '0')";
+            $consultaF = "INSERT INTO factura ( documento, fecha, documento_RE, hora, direccion, precio_total,id_estado) VALUES ( '$documento', '$fechaActual', '$documentore;', '$hractual', '', '0','3')";
             $resultadoF = mysqli_query($mysqli,$consultaF);
 
             if ($resultadoF) {
