@@ -50,6 +50,8 @@
 <div class="pedidoS">
 
     <h1> PEDIDOS PENDIENTES</h1>
+    
+    <div class="info">
     <table class="datos" style="border-collapse: collapse;border:1px solid red;width:1300px;">
         <tr class="nn">
             <td>CODIGO DE FACTURA</td>
@@ -104,11 +106,15 @@
 
             $cambioEstado="UPDATE factura SET id_estado = 4 WHERE id_fac = '$No_fac' ";
             $ejecutar=mysqli_query($mysqli,$cambioEstado);
+            $cambio="UPDATE usuario SET id_estado = 1 WHERE documento = '$documento' ";
+            $ejecuta=mysqli_query($mysqli,$cambio);
             echo '<script>alert("Pedido Entregado")</script> ';
             echo "<script>location.href='domiciliario.php'</script>";
         } 
         ?>
     </table>
+    </div>
+    
 </div>
 
 </html>

@@ -50,6 +50,9 @@
         <div class="pedido" >
 
             <h1> PEDIDOS</h1>
+             <div class="infor">
+
+             
             <table class="datos" style="border-collapse: collapse;border:1px solid red;width:1300px;">
                 <tr class="nn">
                     <td>CODIGO DE FACTURA</td>
@@ -110,6 +113,7 @@
                 }   
                 ?>
             </table>
+            </div>
         </div>
         
     </body>

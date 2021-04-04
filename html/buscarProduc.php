@@ -143,9 +143,9 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
 ?>
 
 <div class="tabla">
-
 <h1> PROCUCTOS POR VENCER</h1>
-    <table class="datos" style="border-collapse: collapse;">
+<div class="inform">
+<table class="datos" style="border-collapse: collapse;">
         <caption>PRODUCTOS PROXIMOS A VENCER CON UN RANGO DE 20 DIAS  A LA FECHA</caption>
 		<tr class="nn">
 			<td>CODIGO DE PRODUCTO</td>
@@ -193,4 +193,5 @@ if ((isset($_POST["MM_consulta"])) && ($_POST["MM_consulta"] == "form1"))
 	}   
 	 ?>
 	</table>
+</div>    
 </div>
