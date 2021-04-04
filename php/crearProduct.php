@@ -12,7 +12,7 @@
 $produ = "SELECT * FROM productos ";
 $query=mysqli_query($mysqli,$produ);
 $fila = mysqli_fetch_array($query);
-$fila[2];
+
 echo $fila;
 
 /* 

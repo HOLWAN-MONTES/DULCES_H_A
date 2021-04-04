@@ -16,6 +16,9 @@ $fechaActual = date("Y-m-d ", $time);
 $hractual = ( date("H:i:s", $time));
 
 
+
+
+
 $empleado = "SELECT * FROM usuario WHERE id_estado = 1 ";
 $query=mysqli_query($mysqli,$empleado);
 $fila = mysqli_fetch_assoc($query);
@@ -29,14 +32,19 @@ if($fila){
     $_SESSION['	edad'] = $fila['telefono'];
     $_SESSION["documento"] = $fila["documento"];
     /* ingresar a la factura  */
-   
+    
+
+ 
+$fecha_actual = date("Y-m-d");
+//sumo 1 día
+ $hrs =date("Y-m-d",strtotime($fecha_actual."+ 3 days"));
         
 
 
-            $consultaF = "INSERT INTO factura ( documento, fecha, documento_RE, hora, direccion, precio_total,id_estado) VALUES ( '$documento', '$fechaActual', '$documentore;', '$hractual', '', '0','3')";
+            $consultaF = "INSERT INTO factura ( documento, fecha, documento_RE, hora, direccion, precio_total,id_estado,fecha_entrega) VALUES ( '$documento', '$fechaActual', '$documentore;', '$hractual', '', '0','3', '$hrs')";
             $resultadoF = mysqli_query($mysqli,$consultaF);
 
-            $actuus ="UPDATE usuario SET id_estado = '2' WHERE usuario.documento =  $documentore";
+            $actuus ="UPDATE usuario SET id_estado = '2' WHERE usuario.documento =  $documentore;";
             $resultadoD = mysqli_query($mysqli,$actuus);
             if ($resultadoF) {
                 echo 1;
@@ -49,6 +57,8 @@ if($fila){
         
 
 
+}else{
+    echo 4;
 }
 ?>
 

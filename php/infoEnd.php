@@ -18,7 +18,8 @@ $idfa=$filaa['id_fac'];
 $fechaF = $filaa['fecha'];
 $hora = $filaa['hora'];
 $direccion = $filaa['direccion'];
-
+$fechaen = $filaa['fecha_entrega'];
+$documentoR = $filaa['documento_RE'];
 
 $sqls = "SELECT SUM(precio_agrupado) FROM detalle_de_factura WHERE id_fac=$idfa";
 $querys = mysqli_query($mysqli, $sqls);
@@ -36,6 +37,12 @@ $actumonto ="UPDATE factura SET precio_total = '$agrupp' WHERE factura.id_fac = 
 $resultadoD = mysqli_query($mysqli,$actumonto);
 
 
+
+
+$consult = "SELECT nombre FROM usuario WHERE documento = $documentoR  ";
+$resul=mysqli_query($mysqli,$consult);
+$f = mysqli_fetch_assoc($resul);
+$nom = $f['nombre'];
 
 ?>
 <?php
@@ -96,7 +103,9 @@ $resultadoD = mysqli_query($mysqli,$actumonto);
         </div>
         <div class="content">
             <h1>NOMBRE DEL REPARTIDOR:</h1>
-            <span>nombre</span>
+            <span>
+                <?=$nom?>
+            </span>
         </div>
 
         <div class="content">
@@ -107,7 +116,9 @@ $resultadoD = mysqli_query($mysqli,$actumonto);
         </div>
         <div class="content">
             <h1>FECHA DE ENTREGA:</h1>
-            <span>nombre</span>
+            <span>
+                <?=$fechaen?>
+            </span>
         </div>
     
         <div class="content">

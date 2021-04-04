@@ -51,7 +51,9 @@ mostrarTabla.addEventListener("click", (e) => {
       ContentDireccion.style.display="block"
     }else if (info == 3) {
       alert("No se creo factura")
-    } 
+    }else if (info == 4) {
+      alert("NO HAY REPARTIDORES DISPONIBLES INGRESA MAS TARDE O VISITA NUESTRO ALMACEN ")
+    }
   })
 })
 

@@ -80,7 +80,7 @@
                 while($mostrar=mysqli_fetch_array($result)){
                     $fechaac = date ("Y-m-d");
                     $holaaa= date_create ($fechaac);
-                    $ddd= $mostrar['fecha'];
+                    $ddd= $mostrar['fecha_entrega'];
                     $vencimiento = date_create($ddd);
                     $dias = date_diff($holaaa,$vencimiento);
                     $dia = $dias->format("%R%a dia");

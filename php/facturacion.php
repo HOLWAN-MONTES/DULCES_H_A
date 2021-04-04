@@ -31,11 +31,11 @@
 
 
 
-            $empleado = "SELECT * FROM usuario WHERE id_estado = 1 ";
+            /* $empleado = "SELECT * FROM usuario WHERE id_estado = 1 ";
             $query=mysqli_query($mysqli,$empleado);
             $fila = mysqli_fetch_assoc($query);
 
-            if($fila){
+            if($fila){ */
                 /* informacion del repartidor  */
                 $documentore = $_SESSION['documento'] = $fila['documento']; 
                 $_SESSION['tip_usu'] = $fila['tip_usu']; 
@@ -81,11 +81,11 @@
                     }
              
 
-
+/* 
             }else{
                     echo '<script> alert("NO HAY REPARTIDORES DISPONIBLES  "); </script>';
                     echo '<script>window.location="  ../php/compras.php"</script>';    
-            }
+            } */
            
 
 ?>
