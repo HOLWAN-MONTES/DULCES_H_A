@@ -94,7 +94,7 @@
                 <td><?php echo $mostrar[11] ?></td>
             
             <?php
-             echo "<td><a href='domiciliario.php?id=$mostrar[0]&dulces=2'>preparar</a></td>";
+             echo "<td><a class='aaaaa' href='domiciliario.php?id=$mostrar[0]&dulces=2'>ENTREGAR</a></td>";
              echo "</tr>";
              $No_fac = $mostrar[0];
             }
