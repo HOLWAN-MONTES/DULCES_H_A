@@ -97,7 +97,7 @@
                 <td><?php echo $mostrar['fecha_vencimiento'] ?></td>
                 <td <?php ?> ><?php echo $dia ?></td>
                 <div style="display:none;">
-                <form action="../php/facturacion.php" method="POST">
+                <form  id="form_todos_productos" method="POST">
                     <input type="hidden" name="documento" value=" <?= $_SESSION['documento']?>">
                     <input type="hidden" value="<?php echo $id_pro ?>" name="id_productos">
                     <input type="hidden" value="<?php echo $mostrar['nom_tip_product'] ?>" name="nom_tip_product">
@@ -107,7 +107,7 @@
                     <input type="hidden" value="<?php echo $mostrar['precio'] ?>" name="precio">
                     <input type="hidden" value="<?php echo $mostrar['fecha_vencimiento'] ?>" name="fecha_vencimiento">
                     <td><input type="number" name="numoer" id="" placeholder="numero de pedido" ></td>
-                    <td><button type="submit">COMPRAR</button></td>
+                    <td><button id="boton_todos_los_productos" type="submit">COMPRAR</button></td>
                 </form>
                 </div>
 

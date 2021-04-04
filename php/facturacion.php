@@ -63,26 +63,23 @@
                         
                         
                         if($resultadoFb){
-                            
-                            1
+                            echo 1;
                 
                         }else{
                         
-                            echo '<script> alert("ELIJA UN PRODUCTO PARA PODER HACER LA COMPRA "); </script>';
-                            echo '<script>window.location="  ../users/clienteM.php"</script>';
+                            echo 2;
                         
                         }
                     }else{
             
-                        echo '<script> alert("ELIJA UN PRODUCTO PARA PODER HACER LA COMPRA "); </script>';
-                        echo '<script>window.location="  ../users/clienteM.php"</script>';
+                        echo 3;
                     }
              
 
 
             }else{
                     echo '<script> alert("NO HAY REPARTIDORES DISPONIBLES  "); </script>';
-                    echo '<script>window.location="  ../users/clienteM.php"</script>';    
+                    echo '<script>window.location="  ../html/hacerCompra.php"</script>';    
             }
            
 
