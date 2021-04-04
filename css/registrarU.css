@@ -106,6 +106,12 @@ select{
     gap:40px;
 }
 
+.login-box .inicio{
+    outline: none;;
+    color: rgb(157, 0, 79);
+    margin-left: 33%;
+    font-family: 'Julius Sans One', sans-serif; 
+}
 
 
 
