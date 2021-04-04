@@ -84,6 +84,15 @@ body {
     border-style: none;
 }
 
+.login-box a{
+    outline: none;;
+    color: rgb(157, 0, 79);
+    margin-left: 33%;
+    font-family: 'Julius Sans One', sans-serif; 
+
+
+}
+
 /* desaperecer ventana */
 /* .inicioSesion{
     display: none;
