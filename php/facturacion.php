@@ -54,8 +54,8 @@
                         $sqls = "SELECT * FROM factura WHERE documento = $documento order by fecha DESC LIMIT 1";
                         $querys = mysqli_query($mysqli, $sqls);
                         $filaD = mysqli_fetch_assoc($querys);
-                        $id_fact = $filaD['id_fac'];
-                      
+                        $id_fact = $_SESSION['id_fact'] = $filaD['id_fac'];
+                        
                         
 
                         $consultab = "INSERT INTO detalle_de_factura (id_fac, id_productos, precio_unitario, precio_agrupado, cantidad) VALUES ('$id_fact', '$id_productos', '$precio', '$total', '$numero_pedidoT')";

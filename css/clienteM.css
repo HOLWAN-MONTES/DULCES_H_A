@@ -358,3 +358,38 @@ header{
     border: rgb(143, 1, 72);
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+/* factura final  */
+
+
+.contentFact{
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 20px; background-color:rgba(143, 1, 72, 0.527);
+    
+}
+
+.contentFact div{
+    margin-bottom: 13px;
+    display: flex;
+}
+
+.contentFact div span{
+    font-size: 20px;
+    padding-top: 5px;
+    
+}
+
+
+.hooo{
+    display: block;
+}
