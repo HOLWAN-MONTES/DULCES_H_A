@@ -66,7 +66,6 @@
                     <td>FECHA DE PEDIDO</td>
                     <td>HORA DE PEDIDO</td>
                     <td>FECHA DE ENTREGA</td>
-                    <td>HORA DE ENTREGA</td>
                     <td>DIAS FALTANTES</td>
                     <td>ESTADO DEL PEDIDO</td>
 
@@ -75,10 +74,10 @@
                 </tr>
 
                 <?php 
-                $sql= "SELECT factura.id_fac,usuario.documento,usuario.nombre,usuario.apellido,factura.documento_RE,factura.direccion,factura.fecha,factura.hora,factura.precio_total, estado.nom_estado, factura.fecha_entrega, factura.hora_entrega FROM factura,usuario,estado WHERE (factura.documento=usuario.documento AND factura.id_estado=estado.id_estado) order by id_fac asc";
+                $sql= "SELECT factura.id_fac,usuario.documento,usuario.nombre,usuario.apellido,factura.documento_RE,factura.direccion,factura.fecha,factura.hora,factura.precio_total, estado.nom_estado, factura.fecha_entrega FROM factura,usuario,estado WHERE (factura.documento=usuario.documento AND factura.id_estado=estado.id_estado) order by id_fac asc";
                 $result=mysqli_query($mysqli,$sql);
 
-                while($mostrar=mysqli_fetch_array($result )){
+                while($mostrar=mysqli_fetch_array($result)){
                     $fechaac = date ("Y-m-d");
                     $holaaa= date_create ($fechaac);
                     $ddd= $mostrar['fecha'];
@@ -105,7 +104,6 @@
                         <td><?php echo $mostrar['fecha'] ?></td>
                         <td><?php echo $mostrar['hora'] ?></td>
                         <td><?php echo $mostrar['fecha_entrega'] ?></td>
-                        <td><?php echo $mostrar['hora_entrega'] ?></td>
                         <td><?php echo $dia ?></td>
                         <td><?php echo $mostrar['nom_estado'] ?></td>
                     </tr>	  
