@@ -4,6 +4,11 @@ require_once("../connection/connection.php");
 session_start();
 
 $documento= $_SESSION['documento'];
+
+
+
+
+
 /* $id_factu= $_SESSION['id_fact']; */
 
 $sqla = "SELECT * FROM factura WHERE documento = $documento order by fecha DESC LIMIT 1";
@@ -20,6 +25,12 @@ $querys = mysqli_query($mysqli, $sqls);
 $filaD = mysqli_fetch_array($querys);
 
 $agrupp =$filaD[0];
+
+if($agrupp == ''){
+    echo '<script> alert("NO HAS ELEGIDO NADA PARA COMPRAR"); </script>';
+    echo '<script>window.location="  ../php/compras.php"</script>';
+}
+
 
 $actumonto ="UPDATE factura SET precio_total = '$agrupp' WHERE factura.id_fac = $idfa";
 $resultadoD = mysqli_query($mysqli,$actumonto);
