@@ -9,7 +9,13 @@
             $fechav = $_POST['fechav'];
             
             
+$produ = "SELECT * FROM productos ";
+$query=mysqli_query($mysqli,$produ);
+$fila = mysqli_fetch_array($query);
+$fila[2];
+echo $fila;
 
+/* 
             if($numref != "" &&  $tip_produc != "" && $marca != "" && $sabor != "" && $tip_dulces != "" && $precio != "" && $fechav != ""){
               
                 $consultaF = "INSERT INTO productos(id_productos, id_tip_producto, id_marca, id_sabor, id_tip_dulces, precio, fecha_vencimiento) VALUES (' $numref ', '$tip_produc ', '$marca', '$sabor', '$tip_dulces', ' $precio', '$fechav')";
@@ -27,5 +33,5 @@
                 echo '<script>window.location="  ../html/crearProducto.php"</script>';
             }
                 
-
+ */
 ?>

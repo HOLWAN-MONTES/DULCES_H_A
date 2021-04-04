@@ -109,14 +109,11 @@ $resultadoD = mysqli_query($mysqli,$actumonto);
             <h1>FECHA DE ENTREGA:</h1>
             <span>nombre</span>
         </div>
-        <div class="content">
-            <h1>HORA DE ENTREGA:</h1>
-            <span>nombre</span>
-        </div>
+    
         <div class="content">
             <h1>PRECIO TOTAL:</h1>
             <span>
-                <?=$agrupp?> $
+            $ <?=$agrupp?> 
             </span>
         </div>
         <div class=" hooo">

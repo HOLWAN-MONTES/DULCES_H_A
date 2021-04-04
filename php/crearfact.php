@@ -36,6 +36,8 @@ if($fila){
             $consultaF = "INSERT INTO factura ( documento, fecha, documento_RE, hora, direccion, precio_total,id_estado) VALUES ( '$documento', '$fechaActual', '$documentore;', '$hractual', '', '0','3')";
             $resultadoF = mysqli_query($mysqli,$consultaF);
 
+            $actuus ="UPDATE usuario SET id_estado = '2' WHERE usuario.documento =  $documentore";
+            $resultadoD = mysqli_query($mysqli,$actuus);
             if ($resultadoF) {
                 echo 1;
               
