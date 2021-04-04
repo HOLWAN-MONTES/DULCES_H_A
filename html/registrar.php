@@ -33,7 +33,7 @@
                             <!--USERNAME INPUT-->
                         <div class="ads">
                             <label for="username">DOCUMENTO</label>
-                            <input  type="text" name="documento"  id="usuario" required pattern="[0-9]{9,12}" title="SOLO números. Tamaño mínimo: 9. Tamaño máximo: 12">
+                            <input  type="number" name="documento"  id="usuario" required pattern="[0-9]{9,12}" title="SOLO números. Tamaño mínimo: 9. Tamaño máximo: 12">
 
                         </div>    
                        
