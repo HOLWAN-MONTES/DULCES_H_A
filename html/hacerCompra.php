@@ -45,7 +45,7 @@
         <div class="menu">
             <ul>
                 <li id="boton"><a id="boton" href="../users/clienteM.php">CATALOGO DE PRODUCTOS</a></li>
-                <li id="boton"><a id="boton" href="">PRODUCTOS PEDIDOS</a></li>
+                <li id="boton"><a id="boton" href="productosPedidos.php">PRODUCTOS PEDIDOS</a></li>
                 <li id="boton"><a id="boton" href="">HACER COMPRA</a></li>
                 <a href=""><i class="icono fas fa-cart-arrow-down"></i></a>
                 <span class="carrito" id="carrito"><?=$resultado ?></span>
