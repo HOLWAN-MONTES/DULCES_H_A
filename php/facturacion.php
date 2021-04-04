@@ -61,6 +61,8 @@
                         $consultab = "INSERT INTO detalle_de_factura (id_fac, id_productos, precio_unitario, precio_agrupado, cantidad) VALUES ('$id_fact', '$id_productos', '$precio', '$total', '$numero_pedidoT')";
                         $resultadoFb = mysqli_query($mysqli,$consultab);
                         
+
+                        /* $total2 = $total */
                         
                         if($resultadoFb){
                             echo '<script> alert("AGREGADO AL CARRITO CORRECTAMENTE  "); </script>';
