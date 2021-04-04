@@ -50,6 +50,7 @@
 <div class="pedidoS">
 
     <h1> PEDIDOS PENDIENTES</h1>
+    <div class="info">
     <table class="datos" style="border-collapse: collapse;border:1px solid red;width:1300px;">
         <tr class="nn">
             <td>CODIGO DE FACTURA</td>
@@ -99,6 +100,7 @@
         <?php  
         ?>
     </table>
+    </div>
 </div>
 
 </html>

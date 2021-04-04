@@ -352,14 +352,17 @@ input[type=number] { -moz-appearance:textfield; }
 
 .tabla{
     color: rgb(157, 0, 79);
-    top: 130%;
+    top: 120%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 30px;
     margin-top: 4%;
 } 
+.inform{
+    overflow-y: auto;
+    height: 300px;
+}
 .tabla h1{
     margin: 10px;
     padding: 0 0 20px;
@@ -396,13 +399,18 @@ input[type=number] { -moz-appearance:textfield; }
 
 .pedido{
     color: rgb(157, 0, 79);
+    top: 50%;
     left: 50%;
-    position: relative;
+    position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 30px;
-    margin-top: 15%;
+    padding: 0px;
+    margin-top: 4%;
 } 
+.infor{
+    overflow-y: auto;
+    height: 400px;
+}
 .pedido h1{
     margin: 10px;
     padding: 0 0 20px;
