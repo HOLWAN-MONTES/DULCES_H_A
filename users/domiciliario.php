@@ -72,7 +72,7 @@
 
         <?php 
 
-            $sql= "SELECT detalle_de_factura.id_productos,detalle_de_factura.cantidad,productos.Nombre_producto, tipo_producto.nom_tip_product, tipo_dulces.nom_tip_dulces, factura.id_fac,usuario.documento,usuario.nombre,usuario.apellido,factura.direccion,factura.fecha,factura.hora,factura.precio_total FROM detalle_de_factura,productos,tipo_producto,tipo_dulces,factura,usuario WHERE (detalle_de_factura.id_fac=factura.id_fac AND detalle_de_factura.id_productos=productos.id_productos AND productos.id_tip_producto=tipo_producto.id_tip_producto AND factura.id_estado = 3 AND productos.id_tip_dulces=tipo_dulces.id_tip_dulces AND factura.documento=usuario.documento) AND (factura.documento_RE= $documento) order by fecha asc";
+            $sql= "SELECT detalle_de_factura.id_productos,detalle_de_factura.cantidad, tipo_producto.nom_tip_product, tipo_dulces.nom_tip_dulces, factura.id_fac,usuario.documento,usuario.nombre,usuario.apellido,factura.direccion,factura.fecha,factura.hora,factura.precio_total FROM detalle_de_factura,productos,tipo_producto,tipo_dulces,factura,usuario WHERE (detalle_de_factura.id_fac=factura.id_fac AND detalle_de_factura.id_productos=productos.id_productos AND productos.id_tip_producto=tipo_producto.id_tip_producto AND factura.id_estado = 3 AND productos.id_tip_dulces=tipo_dulces.id_tip_dulces AND factura.documento=usuario.documento) AND (factura.documento_RE= $documento) order by fecha asc";
             $result=mysqli_query($mysqli,$sql);
 
         while($mostrar=mysqli_fetch_array($result)){
