@@ -4,6 +4,11 @@ require_once("../connection/connection.php");
 session_start();
 
 $documento= $_SESSION['documento'];
+
+
+
+
+
 /* $id_factu= $_SESSION['id_fact']; */
 
 $sqla = "SELECT * FROM factura WHERE documento = $documento order by fecha DESC LIMIT 1";
@@ -21,6 +26,12 @@ $filaD = mysqli_fetch_array($querys);
 
 $agrupp =$filaD[0];
 
+if($agrupp == ''){
+    echo '<script> alert("NO HAS ELEGIDO NADA PARA COMPRAR"); </script>';
+    echo '<script>window.location="  ../php/compras.php"</script>';
+}
+
+
 $actumonto ="UPDATE factura SET precio_total = '$agrupp' WHERE factura.id_fac = $idfa";
 $resultadoD = mysqli_query($mysqli,$actumonto);
 
@@ -30,7 +41,7 @@ $resultadoD = mysqli_query($mysqli,$actumonto);
 <?php
     $sql = "SELECT detalle_de_factura.id_productos,marca_dulces.nom_marca,tipo_producto.nom_tip_product,precio_unitario,precio_agrupado,cantidad FROM detalle_de_factura,tipo_producto,marca_dulces,productos WHERE detalle_de_factura.id_productos=productos.id_productos and productos.id_tip_producto=tipo_producto.id_tip_producto and productos.id_marca=marca_dulces.id_marca and id_fac = $idfa";
     $queryl = mysqli_query($mysqli, $sql);
-    $fila = mysqli_fetch_assoc($queryl);
+    
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +62,14 @@ $resultadoD = mysqli_query($mysqli,$actumonto);
 
 <body class="content-infoend">
 
+
+<div>
+    <form action="../users/clienteM.php" method="post"><button type="submit">REGRESAR</button></form>
+
+</div>
     <div class="contentFact">
+
+        <h1 class="ttl">FACTURA DE ENTREGA</h1>
         <div class="content">
             <h1>NUMERO DE FACTUA:</h1>
             <span>
@@ -95,10 +113,15 @@ $resultadoD = mysqli_query($mysqli,$actumonto);
             <h1>HORA DE ENTREGA:</h1>
             <span>nombre</span>
         </div>
-
-        <div class="content hooo">
+        <div class="content">
+            <h1>PRECIO TOTAL:</h1>
+            <span>
+                <?=$agrupp?> $
+            </span>
+        </div>
+        <div class=" hooo">
             <h1>PRODUCTOS PEDIDOS:</h1>
-            <table>
+            <table class="aaa">
             <thead>
             <tr>
             <th>id producto</th>
@@ -110,35 +133,29 @@ $resultadoD = mysqli_query($mysqli,$actumonto);
             </tr>
             </thead>
             <tbody>
-            <tr>
+            
             <?php
-            foreach($fila as $products){
-                ?><td>$products["id_productos"]</td>
-                <td>$products["nom_marca"]</td>
-                <td>$products["nom_tip_product"]</td>
-                <td>$products["precio_unitario"]</td>
-                <td>$products["cantidad"]</td>
-                <td>$products["precio_agrupado"]</td>
+                foreach($queryl as $pro){
+            ?>
+            <tr>
+                <td><?=$pro["id_productos"]?></td>
+                <td><?=$pro["nom_marca"]?></td>
+                <td><?=$pro["nom_tip_product"]?></td>
+                <td><?=$pro["precio_unitario"]?></td>
+                <td><?=$pro["cantidad"]?></td>
+                <td><?=$pro["precio_agrupado"]?></td>
+            </tr> 
             <?php
             }
             ?>
             
-            </tr>
             </tbody>
-            </table>
-            
-            
            
          
         </div>
 
 
-        <div class="content">
-            <h1>PRECIO TOTAL:</h1>
-            <span>
-                <?=$agrupp?> $
-            </span>
-        </div>
+        
 
 
 

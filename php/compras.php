@@ -124,7 +124,7 @@
 
 <div class="confirmarEnvio">
 <form action="infoEnd.php" method="post">
-
+    
     <button type="submit">CONFIRMAR ENVIO</button>
 </form>
 

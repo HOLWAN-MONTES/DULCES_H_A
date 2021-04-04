@@ -79,6 +79,7 @@
 
             ?>
             <tr>
+
                 <td><?php echo $mostrar[0] ?></td>
                 <td><?php echo $mostrar[1] ?></td>
                 <td><?php echo $mostrar[2] ?></td>
@@ -91,6 +92,7 @@
                 <td><?php echo $mostrar[9] ?></td>
                 <td><?php echo $mostrar[10] ?></td>
                 <td><?php echo $mostrar[11] ?></td>
+                
             </tr>
             <?php
             }
