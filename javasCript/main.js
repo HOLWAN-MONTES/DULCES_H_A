@@ -70,6 +70,7 @@ crearDireccion.addEventListener("click", (o) => {
     if (info2 == 1) {
       ContentDireccion.style.display = "none" 
       tabla.style.display = "block";
+      window.location="  ../php/compras.php" 
     }else if (info2 == 2) {
       alert("No se hizo lo que usted quizo")
     } 
