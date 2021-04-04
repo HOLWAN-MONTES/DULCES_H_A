@@ -209,6 +209,11 @@ header{
     margin-top: 4%;
     display: none ;
 } 
+
+.tablaa{
+    display: block;
+}
+
 .tabla h1{
     margin: 10px;
     padding: 0 0 20px;

@@ -53,7 +53,7 @@
         </div>
     </header>
   
-<div class="tabla" id="tabla">
+<div class="tabla tablaa" >
 
 <h1> PROCUCTOS EN VENTA</h1>
     <table class="datos" style="border-collapse: collapse;width:900px;">
@@ -96,8 +96,8 @@
                 <td><?php echo $mostrar['precio'] ?></td>
                 <td><?php echo $mostrar['fecha_vencimiento'] ?></td>
                 <td <?php ?> ><?php echo $dia ?></td>
-                <div style="display:none;">
-                <form  id="form_todos_productos" method="POST">
+                <div >
+                <form  action="../php/facturacion.php" method="POST">
                     <input type="hidden" name="documento" value=" <?= $_SESSION['documento']?>">
                     <input type="hidden" value="<?php echo $id_pro ?>" name="id_productos">
                     <input type="hidden" value="<?php echo $mostrar['nom_tip_product'] ?>" name="nom_tip_product">
@@ -107,7 +107,7 @@
                     <input type="hidden" value="<?php echo $mostrar['precio'] ?>" name="precio">
                     <input type="hidden" value="<?php echo $mostrar['fecha_vencimiento'] ?>" name="fecha_vencimiento">
                     <td><input type="number" name="numoer" id="" placeholder="numero de pedido" ></td>
-                    <td><button id="boton_todos_los_productos" type="submit">COMPRAR</button></td>
+                    <td><button  type="submit">COMPRAR</button></td>
                 </form>
                 </div>
 
@@ -122,31 +122,8 @@
 	</table>
 </div>
 
-<form id ="factura" method="POST">
-    <input type="hidden" name="documento" value=" <?= $_SESSION['documento']?>">
-    <input type="hidden" value="<?php echo $id_pro ?>" name="id_productos">
-    <input type="hidden" value="<?php echo $mostrar['nom_tip_product'] ?>" name="nom_tip_product">
-    <input type="hidden" value="<?php echo $mostrar['nom_tip_dulces'] ?>" name="nom_tip_dulces">
-    <input type="hidden" value="<?php echo $mostrar['nom_sabor'] ?>" name="nom_sabor">
-    <input type="hidden" value="<?php echo $mostrar['nom_marca'] ?>" name="nom_marca">
-    <input type="hidden" value="<?php echo $mostrar['precio'] ?>" name="precio">
-    <input type="hidden" value="<?php echo $mostrar['fecha_vencimiento'] ?>" name="fecha_vencimiento">
-    <input type="hidden" name="numoer" id="" value = 0 >
-    <button type="buttom" class="btn-hacerfactura" id="btn-hacerfactura">crear factura</button>
-                
-</form>
-
-<div class="direccion" id="direccion">
-
-    <form id="form_direccion" method="post" class="hacerCompras">
-        <label for="">DIRECCION A ENVIAR </label>
-        <input  type="text" value="" name="direccion"  placeholder="DIGITA LA DIRECCIÓN" require>
-        <button id="crearDireccion" class="BOTONeNVIAR" type="submit">CREAR</button>
-    </form>
 
 
-
-</div>
 
 
 <script src="../javasCript/main.js"></script>
