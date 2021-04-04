@@ -40,9 +40,9 @@
         <div class="menu">
             <ul>
                 <li><a href="../users/admin.php">INICIO</a></li>
-                <li><a style="background:black;"  href="">ACTIVIDAD</a></li>
+                <li><a style="background:white;color:black;"  href="">ACTIVIDAD</a></li>
                 <li><a href="crearDO.php">CREAR EMPLEADO</a></li>
-                <li><a  href="../html/crearProducto.php">CREAR PRODUCTO</a></li>
+                <li><a  href="../html/crearProducto.php">ASIGNAR FECHA DE VENCIMIENTO</a></li>
             </ul>
         </div>
     </header>

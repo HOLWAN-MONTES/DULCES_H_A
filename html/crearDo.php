@@ -53,8 +53,8 @@
             <ul>
                 <li><a href="../users/admin.php">INICIO</a></li>
                 <li><a href="buscarProduc.php">ACTIVIDAD</a></li>
-                <li><a style="background:black;" href="">CREAR EMPLEADO</a></li>
-                <li><a href="../html/crearProducto.php">CREAR PRODUCTO</a></li>
+                <li><a style="background:white;color:black;" href="">CREAR EMPLEADO</a></li>
+                <li><a href="../html/crearProducto.php">ASIGNAR FECHA DE VENCIMIENTO</a></li>
             </ul>
         </div>
     </header>

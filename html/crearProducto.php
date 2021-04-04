@@ -71,7 +71,7 @@
                 <li><a href="../users/admin.php">INICIO</a></li>
                 <li><a href="../html/buscarProduc.php">ACTIVIDAD</a></li>
                 <li><a href="../html/crearDO.php">CREAR EMPLEADO</a></li>
-                <li><a style="background:black;" href=""></a></li>
+                <li><a style="background:white;color:black;" href="">ASIGNAR FECHA DE VENCIMIENTO</a></li>
             </ul>
         </div>
     </header>
